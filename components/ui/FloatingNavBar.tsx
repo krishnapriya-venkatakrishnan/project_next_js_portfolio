@@ -70,14 +70,15 @@ export const FloatingNav = ({
               "relative dark:text-white items-center flex space-x-1 text-black dark:hover:text-neutral-300 hover:text-neutral-500"
             )}
           >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
+            {/* <span className="block sm:hidden">{navItem.icon}</span> */}
+            {/* <span className="hidden sm:block text-sm">{navItem.name}</span> */}
+            <span className="text-sm">{navItem.name}</span>
           </Link>
         ))}
-        <div className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white p-1.5 rounded-full">
+        <div className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white rounded-full">
           <ToggleButton />
         </div>
-        <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
+        <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
       </motion.div>
       
     </AnimatePresence>
