@@ -6,10 +6,14 @@
 @layer base {
   :root {
     /* light mode */
-    
   }
 }
 /* dark mode */
+.dark {
+  * {
+    /* @apply bg-black; */
+  }
+}
 
 @layer base {
   * {
@@ -19,6 +23,7 @@
 }
 
 @theme {
+
   --animate-marquee-left: marquee-left 1s linear;
   --animate-marquee-right: marquee-right 1s linear;
 
@@ -42,9 +47,25 @@
 
 }
 
+@theme inline {
+
+  --shadow-input:
+    0px 2px 3px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+    
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+}
+
 @utility container {
-  padding-inline: 2rem;
-  --breakpoint-2xl: 1400px;
+  /* padding-inline: 2rem; */
+  /* --breakpoint-2xl: 1400px; */
   @variant sm {
     /* specific to smaller screens */
   }
@@ -58,9 +79,11 @@
   background-image: --value([*]);
 }
 
-
 :root {
   /* light mode */
+  li {
+    /* @apply relative before:absolute before:content-[''] before:-left-2.5 before:top-2.5 before:h-1 before:w-1 before:rounded-full dark:before:bg-blue-400 before:bg-orange-400; */
+  }
 }
 
 .dark {

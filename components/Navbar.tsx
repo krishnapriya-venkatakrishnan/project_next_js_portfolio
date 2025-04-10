@@ -5,26 +5,22 @@ const Navbar = () => {
   const navList = [
     {
       name: "About",
-      link: "#"
+      link: "#about",
     },
     {
       name: "Projects",
-      link: "#"
-    },
-    {
-      name: "References",
-      link: "#"
+      link: "#projects",
     },
     {
       name: "Contact",
-      link: "#"
+      link: "#contact",
     }
   ]
   
   return (
     <FloatingNav
     navItems={navList}
-    className=""
+    className="dark:bg-black"
     />
   )
 }
