@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import { HighlightButton, MovingGrid } from "./MovingGrid";
+import { HighlightButton } from "./MovingGrid";
 import { Compare } from "./Compare";
 
 interface CarouselProps {
@@ -20,8 +20,10 @@ interface CarouselProps {
 
 type Card = {
   src: string;
+  description: string;
   title: string;
-  category: string;
+  deployedLink: string;
+  technologies?: React.ReactNode;
 };
 
 export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
@@ -135,10 +137,10 @@ export const Card = ({
   return (
     <>
       <motion.div
-        layoutId={layout ? `card-${card.title}` : undefined}
-        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-70 md:h-[30rem] md:w-96 lg:h-[40rem] lg:w-130 overflow-hidden flex flex-col items-start justify-start relative z-10"
+        layoutId={layout ? `card-${card.description}` : undefined}
+        className="rounded-3xl bg-gray-100 dark:bg-neutral-900  w-70 h-[30rem] md:w-96 lg:h-[40rem] lg:w-130 overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
-          <div className="h-1/2 w-full relative">
+          <div className="min-h-1/2 w-full relative">
             { index === 0 ?
               <div className="w-full h-full flex items-center justify-center [transform-style:preserve-3d]">
                 <div
@@ -158,31 +160,23 @@ export const Card = ({
             :
               <Image
               src={card.src}
-              alt={card.title}
+              alt={card.description}
               fill
               />
             }
           </div>
-          <div className="flex-1  w-full p-1 flex flex-col items-start justify-between">
-            <div className="flex flex-col items-start">
-              <p>{card.category}</p>
-              <p>{card.title}</p>
+          <div className="flex-1 h-[1/2] w-full px-4 py-2 flex flex-col items-start justify-between">
+            <div className="flex flex-col items-start  w-full">
+              <p className="text-[1.25rem] font-medium">{card.title}</p>
+              <p className="overflow-y-scroll h-[140px] lg:h-[200px] w-full">{card.description}</p>
             </div>
-            <div className="w-full flex items-center gap-1 md:gap-4 justify-center md:py-8 md:px-8">
+            <div className="w-full flex items-center gap-1 md:gap-4 justify-between py-2 lg:py-4 z-20">
+              {card.technologies}
               <Link
-              href={card.title}
+              href={card.deployedLink}
               className="cursor-pointer"
-              >
-                <HighlightButton
-                  borderRadius="1.75rem"
-                  className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 cursor-pointer"
-                >
-                  Explore
-                </HighlightButton>
-              </Link>
-              <Link
-              href={card.title}
-              className="cursor-pointer"
+              target="_blank"
+              rel="noopener noreferrer"
               >
                 <HighlightButton
                   borderRadius="1.75rem"
