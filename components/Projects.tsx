@@ -35,10 +35,16 @@ const data = [
     deployedLink: "",
   },
   {
-    title: "AI SAAS landing page",
-    description: "Launching the new Apple Vision Pro.",
-    src: "/assets/SampleProject.png",
-    deployedLink: "",
+    title: "Landing page",
+    description: "This scroll-based website opens with a fixed navigation bar that adapts as the user scrolls, offering smooth transitions and active link highlights tied to scroll position. The mobile view features a toggleable menu with background imagery and icon animations for an engaging touch. Throughout the site, content is dynamically pulled from a centralized configuration file, making the layout modular and easy to maintain. Interactive buttons with glowing gradient effects enhance the UI, while animated pricing transitions are powered by 'react-countup', allowing seamless toggling between monthly and yearly plans. Elements across the site respond with smooth hover and scroll-based transitions using Tailwind utilities and 'react-scroll'. Collapsible components like FAQs use controlled states and animated reveals using 'react-slidedown'. Built with React, TailwindCSS, and lightweight animation libraries, this website delivers a sleek, interactive journey optimized for both desktop and mobile users.",
+    src: "/assets/landing-page.png",
+    deployedLink: "https://project-landing-page-one.vercel.app/",
+    technologies: (
+      <div className="flex items-center justify-center gap-4">
+        <SiReact className="text-[#61DAFB] text-2xl" />
+        <SiTailwindcss className="text-[#06B6D4] text-2xl" />
+      </div>
+    )
   },
 
   {
