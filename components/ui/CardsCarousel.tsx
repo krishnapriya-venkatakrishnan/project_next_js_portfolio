@@ -24,6 +24,7 @@ type Card = {
   title: string;
   deployedLink: string;
   technologies?: React.ReactNode;
+  secondImage?: string;
 };
 
 export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
@@ -148,8 +149,8 @@ export const Card = ({
                 >
                   <Compare
                     firstImage={card.src}
-                    secondImage={card.src}
-                    firstImageClassName="object-cover object-left-top w-full"
+                    secondImage={card.secondImage}
+                    firstImageClassName="object-cover object-left-top w-full rounded-b-none"
                     secondImageClassname="object-cover object-left-top w-full"
                     className="w-full h-full"
                     slideMode="hover"

@@ -105,7 +105,7 @@ const SkeletonThree = () => {
         className="h-full w-1/2 rounded-2xl bg-white dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-between"
       >
         <Image
-          src="/assets/SampleProject.png"
+          src="/assets/scrimba-certificate.png"
           alt="avatar"
           height={100}
           width={400}
@@ -120,7 +120,7 @@ const SkeletonThree = () => {
         className="h-full w-1/2 rounded-2xl bg-white dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-between"
       >
         <Image
-          src="/assets/SampleProject.png"
+          src="/assets/scrimba-certificate.png"
           alt="avatar"
           height={100}
           width={400}
@@ -145,8 +145,8 @@ const SkeletonFour = () => {
       <p>TypeScript</p>
       <p>JavaScript</p>
       <p>MongoDB</p>
-      <p>CSS</p>
       <p>TailwindCSS</p>
+      <p>CSS</p>
     </motion.div>
   );
 };
