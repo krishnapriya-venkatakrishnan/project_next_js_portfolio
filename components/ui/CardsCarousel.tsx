@@ -60,12 +60,12 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   };
 
   return (
-      <div className="relative w-full h-full flex flex-col items-center justify-center">
-        <h2 className="relative text-[3rem] font-bold tracking-[0.125rem] text-center">
+      <div className="relative w-full h-full flex flex-col items-center">
+        <h2 className="relative text-[3rem] font-bold tracking-[0.125rem] text-center 2xl:text-[4rem]">
           my projects.
         </h2>
         <div
-          className="flex w-full overflow-x-scroll overscroll-x-auto py-3 scroll-smooth [scrollbar-width:none]"
+          className="flex-1 flex w-full items-center overflow-x-scroll overscroll-x-auto py-3 scroll-smooth [scrollbar-width:none]"
           ref={carouselRef}
           onScroll={checkScrollability}
         >
@@ -107,18 +107,18 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         </div>
         <div className="flex self-end justify-end gap-2 mr-10">
           <button
-            className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50 cursor-pointer"
+            className="relative z-40 h-10 w-10 2xl:h-20 2xl:w-20 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50 cursor-pointer"
             onClick={scrollLeft}
             disabled={!canScrollLeft}
           >
-            <IconArrowNarrowLeft className="h-6 w-6 text-gray-500" />
+            <IconArrowNarrowLeft className="h-6 w-6 2xl:h-10 2xl:w-10 text-gray-500" />
           </button>
           <button
-            className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50 cursor-pointer"
+            className="relative z-40 h-10 w-10 2xl:h-20 2xl:w-20 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50 cursor-pointer"
             onClick={scrollRight}
             disabled={!canScrollRight}
           >
-            <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
+            <IconArrowNarrowRight className="h-6 w-6 2xl:h-10 2xl:w-10 text-gray-500" />
           </button>
         </div>
       </div>
@@ -139,7 +139,7 @@ export const Card = ({
     <>
       <motion.div
         layoutId={layout ? `card-${card.description}` : undefined}
-        className="rounded-3xl bg-gray-100 dark:bg-neutral-900  w-70 h-[30rem] md:w-96 lg:h-[40rem] lg:w-130 overflow-hidden flex flex-col items-start justify-start relative z-10"
+        className="rounded-3xl bg-gray-100 dark:bg-neutral-900  w-70 h-[30rem] md:w-96 lg:h-[40rem] lg:w-130 xl:h-[60rem] xl:w-160 overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
           <div className="min-h-[40%] w-full relative">
             { index === 0 ?
@@ -168,8 +168,8 @@ export const Card = ({
           </div>
           <div className="flex-1 h-[60%] w-full px-4 py-2 flex flex-col items-start justify-between">
             <div className="flex flex-col items-start  w-full">
-              <p className="text-[1.25rem] font-medium">{card.title}</p>
-              <p className="overflow-y-scroll h-[190px] lg:h-[250px] w-full [scrollbar-width:none]">{card.description}</p>
+              <p className="text-[1.25rem] font-medium 2xl:text-[2rem]">{card.title}</p>
+              <p className="overflow-y-scroll h-[190px] lg:h-[200px] xl:h-[420px] w-full [scrollbar-width:none] 2xl:text-[1.5rem]">{card.description}</p>
             </div>
             <div className="w-full flex items-center gap-1 md:gap-4 justify-between py-2 lg:py-4 z-20">
               {card.technologies}
@@ -181,7 +181,7 @@ export const Card = ({
               >
                 <HighlightButton
                   borderRadius="1.75rem"
-                  className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 cursor-pointer"
+                  className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 cursor-pointer 2xl:text-[1.25rem]"
                 >
                   View site
                 </HighlightButton>

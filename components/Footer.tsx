@@ -25,7 +25,7 @@ const Footer = () => {
   }
   
   return (
-    <div className="flex max-sm:flex-col items-center justify-center gap-2 max-w-9xl dark:bg-black">
+    <div className="flex max-sm:flex-col items-center justify-center gap-2 max-w-9xl dark:bg-black 2xl:text-[1.5rem]">
       <div className="flex items-center justify-center p-2 gap-1">
         <p>krishnapriyavenkatakrishnan@gmail.com</p>
         <span onClick={() => copyText("krishnapriyavenkatakrishnan@gmail.com")} className="cursor-pointer"><IconCopy /></span>

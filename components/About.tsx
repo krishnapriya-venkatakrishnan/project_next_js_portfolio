@@ -8,7 +8,7 @@ import GsapLogo from "./GsapLogo";
 export function BentoGridThirdDemo() {
   return (
     <section id="about" className="h-[100dvh] w-full flex flex-col max-w-7xl mx-auto">
-      <h1 className="text-[3rem] font-bold tracking-[0.125rem] lowercase text-center">about me.</h1>
+      <h1 className="text-[3rem] font-bold tracking-[0.125rem] lowercase text-center 2xl:text-[4rem]">about me.</h1>
       <div className="flex-1 py-8 flex max-md:flex-col items-center justify-center tracking-wide gap-2">
         <div className="flex-1 self-start px-4 text-[1rem] 2xl:text-[1.5rem]">
           <ProfilePicture />
@@ -26,11 +26,11 @@ export function BentoGridThirdDemo() {
         </div>
         <div className="w-[40%] self-start flex flex-col gap-4">
           <div>
-            <p className="font-bold pb-1 border-b-1 max-w-[450px]">Technologies</p>
+            <p className="font-bold pb-1 border-b-1 max-w-[450px] 2xl:text-[1.5rem] 2xl:max-w-[550px]">Technologies</p>
             <table className="flex">
               <thead></thead>
               <tbody>
-                <tr className="border-b-1">
+                <tr className="border-b-1 2xl:text-[1.5rem]">
                   <td className="py-2">Frontend</td>
                   <td className="px-2">
                     <div className="flex items-center gap-4">
@@ -43,7 +43,7 @@ export function BentoGridThirdDemo() {
                     </div>
                   </td>
                 </tr>
-                <tr className="border-b-1">
+                <tr className="border-b-1 2xl:text-[1.5rem]">
                   <td className="py-2">Backend & Databases</td>
                   <td className="px-2">
                     <div className="flex items-center gap-4">
@@ -54,7 +54,7 @@ export function BentoGridThirdDemo() {
                     </div>
                   </td>
                 </tr>
-                <tr className="border-b-1">
+                <tr className="border-b-1 2xl:text-[1.5rem]">
                   <td className="py-2">UI & Design Systems</td>
                   <td className="px-2">
                     <div className="flex items-center gap-4">
@@ -63,7 +63,7 @@ export function BentoGridThirdDemo() {
                     </div>
                   </td>
                 </tr>
-                <tr className="border-b-1">
+                <tr className="border-b-1 2xl:text-[1.5rem]">
                   <td className="py-2">Authentication</td>
                   <td className="px-2">
                     <div className="flex items-center gap-4">
@@ -72,7 +72,7 @@ export function BentoGridThirdDemo() {
                     </div>
                   </td>
                 </tr>
-                <tr className="border-b-1">
+                <tr className="border-b-1 2xl:text-[1.5rem]">
                   <td className="py-2">Validation</td>
                   <td className="px-2">
                     <div className="flex items-center gap-4">
@@ -80,7 +80,7 @@ export function BentoGridThirdDemo() {
                     </div>
                   </td>
                 </tr>
-                <tr className="border-b-1">
+                <tr className="border-b-1 2xl:text-[1.5rem]">
                   <td className="py-2">Routing</td>
                   <td className="px-2">
                     <div className="flex items-center gap-4">
@@ -89,7 +89,7 @@ export function BentoGridThirdDemo() {
                     </div>
                   </td>
                 </tr>
-                <tr className="border-b-1">
+                <tr className="border-b-1 2xl:text-[1.5rem]">
                   <td className="py-2">Animations</td>
                   <td className="px-2">
                     <div className="flex items-center gap-4">
@@ -97,7 +97,7 @@ export function BentoGridThirdDemo() {
                     </div>
                   </td>
                 </tr>
-                <tr className="border-b-1">
+                <tr className="border-b-1 2xl:text-[1.5rem]">
                   <td className="py-2">APIs & Tools</td>
                   <td className="px-2">
                     <div className="flex items-center gap-4">
@@ -111,7 +111,7 @@ export function BentoGridThirdDemo() {
             </table>
           </div>
           <div className="flex flex-col gap-4 justify-start">
-            <p className="max-w-[450px] font-bold py-1 border-b-1">Certificates</p>
+            <p className="max-w-[450px] font-bold py-1 border-b-1 2xl:text-[1.5rem] 2xl:max-w-[550px]">Certificates</p>
             <Certificates />
           </div>
         </div>
@@ -180,12 +180,34 @@ const Certificates = () => {
       rotate: 0,
     },
   };
+
+  const largeFirst = {
+    initial: {
+      y: 20,
+      rotate: 0,
+    },
+    hover: {
+      y: 0,
+      rotate: 0,
+    },
+  };
+  const largeSecond = {
+    initial: {
+      y: -20,
+      rotate: 0,
+    },
+    hover: {
+      y: 0,
+      rotate: 0,
+    },
+  };
   return (
+    <>
     <motion.div
       initial="initial"
       animate="animate"
       whileHover="hover"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row space-x-2"
+      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row space-x-2 2xl:hidden"
     >
       <motion.div
         variants={first}
@@ -217,5 +239,43 @@ const Certificates = () => {
         <p className="flex-1 flex justify-center items-center">From JavaScript Mastery</p>
       </motion.div>
     </motion.div>
+
+    <motion.div
+      initial="initial"
+      animate="animate"
+      whileHover="hover"
+      className="flex flex-col flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] space-x-2 max-2xl:hidden"
+    >
+      <motion.div
+        variants={largeFirst}
+        className="h-1/2 w-full rounded-2xl bg-white dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-between"
+      >
+        <Image
+          src="/assets/scrimba-certificate.png"
+          alt="avatar"
+          height={100}
+          width={400}
+          
+          className="object-contain rounded-tl-2xl rounded-tr-2xl"
+        />
+        <p className="flex-1 flex justify-center items-center 2xl:text-[1.5rem]">From Scrimba</p>
+      </motion.div>
+      
+      <motion.div
+        variants={largeSecond}
+        className="h-1/2 w-full rounded-2xl bg-white dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-between"
+      >
+        <Image
+          src="/assets/scrimba-certificate.png"
+          alt="avatar"
+          height={100}
+          width={400}
+          
+          className="object-contain rounded-tl-2xl rounded-tr-2xl"
+        />
+        <p className="flex-1 flex justify-center items-center 2xl:text-[1.5rem]">From JavaScript Mastery</p>
+      </motion.div>
+    </motion.div>
+    </>
   );
 };

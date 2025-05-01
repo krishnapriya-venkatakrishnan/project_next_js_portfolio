@@ -20,12 +20,12 @@ const Intro = () => {
           </div>  
         </div>
 
-        <div className="tracking-wide text-center text-xl py-4 uppercase">
+        <div className="tracking-wide text-center text-xl py-4 uppercase 2xl:text-[1.5rem]">
             A <span className="font-bold underline">web developer</span>, based in Stockholm
         </div>
 
         <div className="flex items-end justify-center px-8 pb-18">
-          <div className="text-center tracking-wide text-xl max-w-[800px]">
+          <div className="text-center tracking-wide text-xl max-w-[800px] 2xl:text-[1.5rem]">
           Former banking software engineer turned web developer- crafting responsive, modern web apps using React, Next.js, and MongoDB.
           </div>
         </div>
@@ -43,8 +43,8 @@ const Intro = () => {
         </div>
         <div className="self-end absolute bottom-5 right-5">
           <a href="/Krishnapriya_Venkatakrishnan_Resume.pdf" download>
-            <Button className="cursor-pointer border-1 bg-black text-white dark:border-black dark:bg-white dark:text-black">
-              <IconDownload />Download Resume
+            <Button className="cursor-pointer border-1 bg-black text-white dark:border-black dark:bg-white dark:text-black 2xl:text-[1.5rem] 2xl:px-16 2xl:py-8 ">
+              <IconDownload className="2xl:scale-[1.5] 2xl:mr-2" />Download Resume
             </Button>
           </a>
         </div>
