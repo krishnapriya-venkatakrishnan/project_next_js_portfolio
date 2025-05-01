@@ -11,8 +11,33 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Krishnapriya Venkatakrishnan's Wed Development Portfolio",
-  description: "Building Responsive & Interactive Websites",
+  title: "Krishnapriya Venkatakrishnan | Front-End Web Developer",
+  description: "Stockholm- based web developer building interactive and responsive websites using React, Next.js, and modern tools",
+  openGraph: {
+    title: "Krishnapriya Venkatakrishnan | Front-End Web Developer",
+    description: "Interactive and responsive websites built with React, Next.js, and modern tools.",
+    url: "", // domain name
+    siteName: "Krishnapriya Venkatakrishnan's Portfolio",
+    images: [
+      {
+        url: "", //image
+        width: 1200,
+        height: 630,
+        alt: "Screenshot of Krishnapriya Venkatakrishnan's portfolio website",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({

@@ -19,6 +19,7 @@ import { Textarea } from "./ui/TextArea"
 import { useState } from "react";
 import { sendMail } from "@/lib/actions/send.action"
 import { useToast } from "@/hooks/useToast"
+import Footer from "./Footer"
 
 const BottomGradient = () => {
   return (
@@ -81,66 +82,67 @@ export function ContactForm() {
   }
 
   return (
-    <section id="contact" className="dark:bg-black pt-16">
-    <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black">
+    <section id="contact" className="h-[100dvh] mx-auto lg:w-[50dvw] dark:bg-black">
+      <div className="mx-auto w-full rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black">
 
-    <h1 className="text-[2.5rem] font-bold uppercase text-center">Contact</h1>
-    <h2 className="text-[1.5rem] uppercase text-center">Let&apos;s work together</h2>
+      <h1 className="text-[3rem] font-bold tracking-[0.125rem] lowercase text-center">contact.</h1>
+      <h2 className="text-[1.25rem] uppercase text-center">Let&apos;s work together</h2>
 
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <FormField
-          control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Your Name</FormLabel>
-              <FormControl>
-                <Input placeholder="Enter your name" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 shadow-input p-4 w-full flex flex-col">
+          <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Your Name</FormLabel>
+                <FormControl>
+                  <Input placeholder="Enter your name" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Your Email Address</FormLabel>
-              <FormControl>
-                <Input placeholder="Enter your email address" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Your Email Address</FormLabel>
+                <FormControl>
+                  <Input placeholder="Enter your email address" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-        <FormField
-          control={form.control}
-          name="message"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Your Message</FormLabel>
-              <FormControl>
-                <Textarea placeholder="Enter your message" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit"
-        className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset] my-2 cursor-pointer !font-space-grotesk"
-        >
-          {loading ? "Sending..." : "Send"}
-          <BottomGradient />
-        </Button>
-        
-      </form>
-    </Form>
+          <FormField
+            control={form.control}
+            name="message"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Your Message</FormLabel>
+                <FormControl>
+                  <Textarea placeholder="Enter your message" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <Button type="submit"
+          className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset] my-2 cursor-pointer !font-space-grotesk"
+          >
+            {loading ? "Sending..." : "Send"}
+            <BottomGradient />
+          </Button>
+          
+        </form>
+      </Form>
 
-    </div>
+      </div>
+      <Footer />
     </section>
   );
 }

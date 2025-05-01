@@ -60,12 +60,12 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   };
 
   return (
-      <div className="relative w-full">
-        <h2 className="text-[2.5rem] font-bold uppercase text-center">
-          My works
+      <div className="relative w-full h-full flex flex-col items-center justify-center">
+        <h2 className="relative text-[3rem] font-bold tracking-[0.125rem] text-center">
+          my projects.
         </h2>
         <div
-          className="flex w-full overflow-x-scroll overscroll-x-auto py-6 scroll-smooth [scrollbar-width:none]"
+          className="flex w-full overflow-x-scroll overscroll-x-auto py-3 scroll-smooth [scrollbar-width:none]"
           ref={carouselRef}
           onScroll={checkScrollability}
         >
@@ -105,7 +105,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             ))}
           </div>
         </div>
-        <div className="flex justify-end gap-2 mr-10">
+        <div className="flex self-end justify-end gap-2 mr-10">
           <button
             className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50 cursor-pointer"
             onClick={scrollLeft}
@@ -141,7 +141,7 @@ export const Card = ({
         layoutId={layout ? `card-${card.description}` : undefined}
         className="rounded-3xl bg-gray-100 dark:bg-neutral-900  w-70 h-[30rem] md:w-96 lg:h-[40rem] lg:w-130 overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
-          <div className="min-h-1/2 w-full relative">
+          <div className="min-h-[40%] w-full relative">
             { index === 0 ?
               <div className="w-full h-full flex items-center justify-center [transform-style:preserve-3d]">
                 <div
@@ -166,10 +166,10 @@ export const Card = ({
               />
             }
           </div>
-          <div className="flex-1 h-[1/2] w-full px-4 py-2 flex flex-col items-start justify-between">
+          <div className="flex-1 h-[60%] w-full px-4 py-2 flex flex-col items-start justify-between">
             <div className="flex flex-col items-start  w-full">
               <p className="text-[1.25rem] font-medium">{card.title}</p>
-              <p className="overflow-y-scroll h-[140px] lg:h-[200px] w-full">{card.description}</p>
+              <p className="overflow-y-scroll h-[190px] lg:h-[250px] w-full [scrollbar-width:none]">{card.description}</p>
             </div>
             <div className="w-full flex items-center gap-1 md:gap-4 justify-between py-2 lg:py-4 z-20">
               {card.technologies}

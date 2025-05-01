@@ -2,7 +2,7 @@
 import React from "react";
 import { Carousel, Card } from "./ui/CardsCarousel";
 
-import { SiClerk, SiCss3, SiFirebase, SiMongodb, SiNextdotjs, SiOpenai, SiReact, SiReactrouter, SiShadcnui, SiTailwindcss, SiZod } from "react-icons/si";
+import { SiClerk, SiCss3, SiFirebase, SiJavascript, SiMongodb, SiNextdotjs, SiOpenai, SiReact, SiReactrouter, SiShadcnui, SiTailwindcss, SiTypescript, SiZod } from "react-icons/si";
 import GsapLogo from "./GsapLogo";
 import Image from "next/image";
 
@@ -14,7 +14,7 @@ export function AppleCardsCarouselDemo() {
   ));
 
   return (
-    <section className="dark:bg-black">
+    <section id="projects" className="h-[100dvh] dark:bg-black">
       <div className="w-full h-full">
         <Carousel items={cards} />
       </div>
@@ -34,6 +34,7 @@ const data = [
         <SiNextdotjs className="text-[#000] dark:text-[#fff] text-2xl" />
         <Image src="/assets/next-auth.png" alt="next-auth" height={25} width={25} className="rounded-full max-sm:h-[20px] max-sm:w-[20px]" />
         <SiReact className="text-[#61DAFB] text-2xl" />
+        <SiTypescript className="text-[#3178C6] text-2xl" />
         <SiMongodb className="text-green-400 text-2xl" />
         <SiTailwindcss className="text-[#06B6D4] text-2xl" />
         <SiShadcnui className="text-[#000] dark:text-[#fff] text-xl" />
@@ -52,6 +53,7 @@ const data = [
         <SiNextdotjs className="text-[#000] dark:text-[#fff] text-2xl" />
         <SiClerk className="text-[#000] dark:text-[#fff] text-2xl" />
         <SiReact className="text-[#61DAFB] text-2xl" />
+        <SiJavascript className="text-[#F7DF1E] text-2xl" />
         <Image src="/assets/logo-live-docs.png" alt="liveblocks" height={25} width={25} className="rounded-full max-sm:h-[20px] max-sm:w-[20px]" />
         <SiShadcnui className="text-[#000] dark:text-[#fff] text-xl" />
         <SiTailwindcss className="text-[#06B6D4] text-2xl" />
@@ -66,6 +68,7 @@ const data = [
     technologies: (
       <div className="flex items-center justify-center gap-4">
         <SiReact className="text-[#61DAFB] text-2xl" />
+        <SiJavascript className="text-[#F7DF1E] text-2xl" />
         <SiTailwindcss className="text-[#06B6D4] text-2xl" />
       </div>
     )
@@ -79,6 +82,7 @@ const data = [
     technologies: (
       <div className="flex items-center justify-center gap-4">
         <SiReact className="text-[#61DAFB] text-2xl" />
+        <SiJavascript className="text-[#F7DF1E] text-2xl" />
         <GsapLogo />
         <SiTailwindcss className="text-[#06B6D4] text-2xl" />
       </div>
@@ -92,6 +96,7 @@ const data = [
     technologies: (
       <div className="flex items-center justify-center gap-4">
         <SiReact className="text-[#61DAFB] text-2xl" />
+        <SiJavascript className="text-[#F7DF1E] text-2xl" />
         <SiReactrouter className="text-[#CA4245] text-2xl" />
         <SiFirebase className="text-[#FFCA28] text-2xl"/>
         <SiCss3 className="text-[#264DE4] text-2xl" />
@@ -106,6 +111,7 @@ const data = [
     technologies: (
       <div className="flex items-center justify-center gap-4">
         <SiReact className="text-[#61DAFB] text-2xl" />
+        <SiJavascript className="text-[#F7DF1E] text-2xl" />
         <SiCss3 className="text-[#264DE4] text-2xl" />
       </div>
     )

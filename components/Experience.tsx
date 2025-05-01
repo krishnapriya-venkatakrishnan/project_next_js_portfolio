@@ -1,9 +1,9 @@
 export function Experience() {
 
   return (
-    <div className="w-full max-w-7xl mx-auto">
-      <h2 className="text-[2.5rem] font-bold uppercase text-center my-10">
-          My journey at Temenos
+    <div className="h-[100dvh] w-full max-w-7xl mx-auto">
+      <h2 className="text-[3rem] font-bold tracking-[0.125rem] text-center my-10">
+          my journey at Temenos.
       </h2>
       <div className="w-full flex max-sm:flex-col items-start justify-center gap-4 px-4">
         <div className="flex-1 flex flex-col">
