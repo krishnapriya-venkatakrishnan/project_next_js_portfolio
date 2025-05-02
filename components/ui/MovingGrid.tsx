@@ -32,7 +32,7 @@ export function HighlightButton({
   return (
     <Component
       className={cn(
-        "relative h-8 w-20 md:h-10 md:w-30 2xl:h-12 2xl:w-40 overflow-hidden bg-transparent p-[1px] text-xl",
+        "relative h-6 w-20 lg:h-10 lg:w-30 2xl:h-12 2xl:w-40 overflow-hidden bg-transparent p-[1px] text-xl",
         containerClassName,
       )}
       style={{

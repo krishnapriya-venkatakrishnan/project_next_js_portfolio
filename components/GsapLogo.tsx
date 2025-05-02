@@ -7,6 +7,7 @@ const GsapLogo = () => {
       alt="gsap logo"
       height={20}
       width={50}
+      className="max-lg:h-4"
     />
   );
 }

@@ -60,66 +60,68 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   };
 
   return (
-      <div className="relative w-full h-full flex flex-col items-center">
-        <h2 className="relative text-[3rem] font-bold tracking-[0.125rem] text-center 2xl:text-[4rem]">
+      <div className="relative w-full h-full flex flex-col flex-1">
+        <h2 className="relative h-[10dvh] font-bold tracking-[0.125rem] text-center text-[1.75rem] lg:text-[3rem] 2xl:text-[4rem]">
           my projects.
         </h2>
-        <div
-          className="flex-1 flex w-full items-center overflow-x-scroll overscroll-x-auto py-3 scroll-smooth [scrollbar-width:none]"
-          ref={carouselRef}
-          onScroll={checkScrollability}
-        >
+        <div className="h-[90dvh]">
           <div
-            className={cn(
-              "absolute right-0  z-[1000] h-auto  w-[5%] overflow-hidden bg-gradient-to-l"
-            )}
-          ></div>
+            className="w-full overflow-x-scroll overscroll-x-auto overflow-y-scroll scroll-smooth [scrollbar-width:none] h-[80dvh]"
+            ref={carouselRef}
+            onScroll={checkScrollability}
+          >
+            {/* <div
+              className={cn(
+                "absolute right-0  z-[1000] h-full  w-[5%]  bg-gradient-to-l"
+              )}
+            ></div> */}
 
-          <div
-            className={cn(
-              "flex flex-row justify-start gap-4 pl-4",
-              "max-w-7xl mx-auto" // remove max-w-4xl if you want the carousel to span the full width of its container
-            )}
-          >
-            {items.map((item, index) => (
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  y: 20,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    duration: 0.5,
-                    delay: 0.2 * index,
-                    ease: "easeOut",
-                    once: true,
-                  },
-                }}
-                key={"card" + index}
-                className="last:pr-[5%] md:last:pr-[33%]  rounded-3xl"
-              >
-                {item}
-              </motion.div>
-            ))}
+            <div
+              className={cn(
+                "flex flex-row justify-start gap-4 pl-4",
+                "max-w-7xl mx-auto h-full" // remove max-w-4xl if you want the carousel to span the full width of its container
+              )}
+            >
+              {items.map((item, index) => (
+                <motion.div
+                  initial={{
+                    opacity: 0,
+                    y: 20,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      duration: 0.5,
+                      delay: 0.2 * index,
+                      ease: "easeOut",
+                      once: true,
+                    },
+                  }}
+                  key={"card" + index}
+                  className="last:pr-[5%] md:last:pr-[33%]  rounded-3xl"
+                >
+                  {item}
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="flex self-end justify-end gap-2 mr-10">
-          <button
-            className="relative z-40 h-10 w-10 2xl:h-20 2xl:w-20 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50 cursor-pointer"
-            onClick={scrollLeft}
-            disabled={!canScrollLeft}
-          >
-            <IconArrowNarrowLeft className="h-6 w-6 2xl:h-10 2xl:w-10 text-gray-500" />
-          </button>
-          <button
-            className="relative z-40 h-10 w-10 2xl:h-20 2xl:w-20 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50 cursor-pointer"
-            onClick={scrollRight}
-            disabled={!canScrollRight}
-          >
-            <IconArrowNarrowRight className="h-6 w-6 2xl:h-10 2xl:w-10 text-gray-500" />
-          </button>
+          <div className="h-[10dvh] flex justify-end items-center gap-2 mb-4 pt-2">
+            <button
+              className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50 cursor-pointer"
+              onClick={scrollLeft}
+              disabled={!canScrollLeft}
+            >
+              <IconArrowNarrowLeft className="h-6 w-6  text-gray-500" />
+            </button>
+            <button
+              className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50 cursor-pointer"
+              onClick={scrollRight}
+              disabled={!canScrollRight}
+            >
+              <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
+            </button>
+          </div>
         </div>
       </div>
   );
@@ -136,22 +138,22 @@ export const Card = ({
 }) => {
 
   return (
-    <>
+    
       <motion.div
         layoutId={layout ? `card-${card.description}` : undefined}
-        className="rounded-3xl bg-gray-100 dark:bg-neutral-900  w-70 h-[30rem] md:w-96 lg:h-[40rem] lg:w-130 xl:h-[60rem] xl:w-160 overflow-hidden flex flex-col items-start justify-start relative z-10"
+        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-full w-70 md:w-96 lg:w-130 xl:w-140 flex flex-col items-start justify-start relative z-10 pb-2"
       >
-          <div className="min-h-[40%] w-full relative">
+          <div className="h-[40%] w-full relative">
             { index === 0 ?
               <div className="w-full h-full flex items-center justify-center [transform-style:preserve-3d]">
                 <div
-                  className="dark:bg-neutral-900 bg-neutral-100 border-neutral-200 dark:border-neutral-800 h-full w-full"
+                  className="dark:bg-neutral-900 bg-neutral-100 border-neutral-200 dark:border-neutral-800 h-full w-full rounded-t-3xl"
                 >
                   <Compare
                     firstImage={card.src}
                     secondImage={card.secondImage}
-                    firstImageClassName="object-cover object-left-top w-full rounded-b-none"
-                    secondImageClassname="object-cover object-left-top w-full"
+                    firstImageClassName="object-cover object-left-top w-full rounded-b-none rounded-t-3xl"
+                    secondImageClassname="object-cover object-left-top w-full rounded-b-none rounded-t-3xl"
                     className="w-full h-full"
                     slideMode="hover"
                     autoplay={true}
@@ -163,33 +165,39 @@ export const Card = ({
               src={card.src}
               alt={card.description}
               fill
+              className="rounded-t-3xl"
               />
             }
           </div>
-          <div className="flex-1 h-[60%] w-full px-4 py-2 flex flex-col items-start justify-between">
-            <div className="flex flex-col items-start  w-full">
-              <p className="text-[1.25rem] font-medium 2xl:text-[2rem]">{card.title}</p>
-              <p className="overflow-y-scroll h-[190px] lg:h-[200px] xl:h-[420px] w-full [scrollbar-width:none] 2xl:text-[1.5rem]">{card.description}</p>
-            </div>
-            <div className="w-full flex items-center gap-1 md:gap-4 justify-between py-2 lg:py-4 z-20">
-              {card.technologies}
-              <Link
-              href={card.deployedLink}
-              className="cursor-pointer"
-              target="_blank"
-              rel="noopener noreferrer"
-              >
-                <HighlightButton
-                  borderRadius="1.75rem"
-                  className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 cursor-pointer 2xl:text-[1.25rem]"
+          <div className="h-[60%] w-full">
+            <div className="h-full w-full flex flex-col items-start justify-between">
+              <div className="min-h-[80%] flex flex-col items-start w-full px-1">
+                <p className="text-[1.125rem] lg:text-[1.25rem] font-medium 2xl:text-[1.5rem]">{card.title}</p>
+                <p className="w-full h-[85%] overflow-y-scroll [scrollbar-width:none] max-lg:text-[0.9rem]">
+                  {card.description}
+                </p>
+                
+              </div>
+              <div className="rounded-b-3xl w-full flex-1 flex items-center justify-between gap-1 md:gap-4 pr-1 py-0 xl:py-4 z-20  bg-gray-100 dark:bg-neutral-900">
+                <div className="flex">{card.technologies}</div>
+                <Link
+                href={card.deployedLink}
+                className="cursor-pointer lg:self-center"
+                target="_blank"
+                rel="noopener noreferrer"
                 >
-                  View site
-                </HighlightButton>
-              </Link>
+                  <HighlightButton
+                    borderRadius="1.75rem"
+                    className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 cursor-pointer text-[0.75rem] lg:text-[1rem] 2xl:text-[1.25rem]"
+                  >
+                    View site
+                  </HighlightButton>
+                </Link>
             </div>
+            </div>
+          
           </div>
       </motion.div>
-    </>
   );
 };
 

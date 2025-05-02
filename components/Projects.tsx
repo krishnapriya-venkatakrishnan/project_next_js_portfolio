@@ -15,7 +15,7 @@ export function AppleCardsCarouselDemo() {
 
   return (
     <section id="projects" className="h-[100dvh] dark:bg-black">
-      <div className="w-full h-full">
+      <div className="w-full h-full flex">
         <Carousel items={cards} />
       </div>
     </section>
@@ -25,21 +25,21 @@ export function AppleCardsCarouselDemo() {
 const data = [
   {
     title: "DevOverflow",
-    description: "Dev Overflow is a full-stack Q&A web application inspired by Stack Overflow, designed with a scalable architecture and a strong focus on user experience. The application features a consistent layout with a top navigation bar (including a global search bar), and a responsive container below that splits into a left sidebar for page navigation, a central section for dynamic page content, and a right sidebar displaying top questions and popular tags. Core features include secure authentication (email/password and social login), dynamic routing, and URL state management. Users can explore questions using filters, pagination, and local search, submit questions and answers (with OpenAI integration for AI-generated answers), and interact via upvotes/downvotes, which visually reflect user engagement. The backend is powered by MongoDB and manages users, accounts, questions, answers, tags, votes, collections, and interactions. Server actions handle logic for data operations, and API routes support user/account management. Additional highlights include profile pages with user stats, reputation and badge systems, a Find Jobs page (integrated with the Arbetsförmedlingen API), community and collection views, and full theme support (light, dark, system).",
+    description: "Dev Overflow is a full-stack Q&A web app inspired by Stack Overflow, built with scalable architecture and a focus on user experience. It features a consistent layout with a top nav bar (including global search) and a responsive container split into a left sidebar (navigation), central dynamic content, and a right sidebar (top questions and tags). Key features include secure authentication (email/password & social login), dynamic routing, and URL state management. Users can explore questions using filters, pagination, and local search, submit questions and answers (with OpenAI-generated suggestions), and engage via upvotes/downvotes. The MongoDB-powered backend manages users, accounts, questions, answers, tags, votes, and interactions. Server actions handle data logic; API routes support user/account management. Additional features include user profiles with stats, a reputation/badge system, a Find Jobs page (with Arbetsförmedlingen API), community and collection views, and full theme support (light, dark, system).",
     src: "/assets/devflow-light.png",
     secondImage: "/assets/devflow-dark.png",
     deployedLink: "https://nextjs-devflow-nu.vercel.app/",
     technologies: (
-      <div className="flex items-center justify-center gap-4">
-        <SiNextdotjs className="text-[#000] dark:text-[#fff] text-2xl" />
-        <Image src="/assets/next-auth.png" alt="next-auth" height={25} width={25} className="rounded-full max-sm:h-[20px] max-sm:w-[20px]" />
-        <SiReact className="text-[#61DAFB] text-2xl" />
-        <SiTypescript className="text-[#3178C6] text-2xl" />
-        <SiMongodb className="text-green-400 text-2xl" />
-        <SiTailwindcss className="text-[#06B6D4] text-2xl" />
-        <SiShadcnui className="text-[#000] dark:text-[#fff] text-xl" />
-        <SiZod className="text-[#06B6D4] text-2xl" />
-        <SiOpenai className="text-2xl"/>
+      <div className="flex items-center gap-1 lg:gap-2">
+        <SiNextdotjs className="text-[#000] dark:text-[#fff] lg:text-2xl" />
+        <Image src="/assets/next-auth.png" alt="next-auth" height={25} width={25} className="rounded-full max-lg:h-[20px] max-lg:w-[20px]" />
+        <SiReact className="text-[#61DAFB] lg:text-2xl" />
+        <SiTypescript className="text-[#3178C6] lg:text-2xl" />
+        <SiMongodb className="text-green-400 lg:text-2xl" />
+        <SiTailwindcss className="text-[#06B6D4] lg:text-2xl" />
+        <SiShadcnui className="text-[#000] dark:text-[#fff] lg:text-xl" />
+        <SiZod className="text-[#06B6D4] lg:text-2xl" />
+        <SiOpenai className="lg:text-2xl"/>
       </div>
     )
   },
@@ -49,14 +49,14 @@ const data = [
     src: "/assets/live-docs.png",
     deployedLink: "https://project-live-docs.vercel.app/",
     technologies: (
-      <div className="flex items-center justify-center gap-4">
-        <SiNextdotjs className="text-[#000] dark:text-[#fff] text-2xl" />
-        <SiClerk className="text-[#000] dark:text-[#fff] text-2xl" />
-        <SiReact className="text-[#61DAFB] text-2xl" />
-        <SiJavascript className="text-[#F7DF1E] text-2xl" />
-        <Image src="/assets/logo-live-docs.png" alt="liveblocks" height={25} width={25} className="rounded-full max-sm:h-[20px] max-sm:w-[20px]" />
-        <SiShadcnui className="text-[#000] dark:text-[#fff] text-xl" />
-        <SiTailwindcss className="text-[#06B6D4] text-2xl" />
+      <div className="flex items-center gap-1 lg:gap-2">
+        <SiNextdotjs className="text-[#000] dark:text-[#fff] lg:text-2xl" />
+        <SiClerk className="text-[#000] dark:text-[#fff] lg:text-2xl" />
+        <SiReact className="text-[#61DAFB] lg:text-2xl" />
+        <SiJavascript className="text-[#F7DF1E] lg:text-2xl" />
+        <Image src="/assets/logo-live-docs.png" alt="liveblocks" height={25} width={25} className="rounded-full max-lg:h-[20px] max-lg:w-[20px]" />
+        <SiShadcnui className="text-[#000] dark:text-[#fff] lg:text-xl" />
+        <SiTailwindcss className="text-[#06B6D4] lg:text-2xl" />
       </div>
     )
   },
@@ -66,10 +66,10 @@ const data = [
     src: "/assets/landing-page.png",
     deployedLink: "https://project-landing-page-one.vercel.app/",
     technologies: (
-      <div className="flex items-center justify-center gap-4">
-        <SiReact className="text-[#61DAFB] text-2xl" />
-        <SiJavascript className="text-[#F7DF1E] text-2xl" />
-        <SiTailwindcss className="text-[#06B6D4] text-2xl" />
+      <div className="flex items-center gap-1 lg:gap-2">
+        <SiReact className="text-[#61DAFB] lg:text-2xl" />
+        <SiJavascript className="text-[#F7DF1E] lg:text-2xl" />
+        <SiTailwindcss className="text-[#06B6D4] lg:text-2xl" />
       </div>
     )
   },
@@ -80,11 +80,11 @@ const data = [
     src: "/assets/3d-animated-website.png",
     deployedLink: "https://project-3d-animated-website.vercel.app/",
     technologies: (
-      <div className="flex items-center justify-center gap-4">
-        <SiReact className="text-[#61DAFB] text-2xl" />
-        <SiJavascript className="text-[#F7DF1E] text-2xl" />
+      <div className="flex items-center gap-1 lg:gap-2">
+        <SiReact className="text-[#61DAFB] lg:text-2xl" />
+        <SiJavascript className="text-[#F7DF1E] lg:text-2xl" />
         <GsapLogo />
-        <SiTailwindcss className="text-[#06B6D4] text-2xl" />
+        <SiTailwindcss className="text-[#06B6D4] lg:text-2xl" />
       </div>
     )
   },
@@ -94,12 +94,12 @@ const data = [
     src: "/assets/vanlife.png",
     deployedLink: "https://66bc95639028ae7382537252--famous-fenglisu-54cca7.netlify.app/",
     technologies: (
-      <div className="flex items-center justify-center gap-4">
-        <SiReact className="text-[#61DAFB] text-2xl" />
-        <SiJavascript className="text-[#F7DF1E] text-2xl" />
-        <SiReactrouter className="text-[#CA4245] text-2xl" />
-        <SiFirebase className="text-[#FFCA28] text-2xl"/>
-        <SiCss3 className="text-[#264DE4] text-2xl" />
+      <div className="flex items-center gap-1 lg:gap-2">
+        <SiReact className="text-[#61DAFB] lg:text-2xl" />
+        <SiJavascript className="text-[#F7DF1E] lg:text-2xl" />
+        <SiReactrouter className="text-[#CA4245] lg:text-2xl" />
+        <SiFirebase className="text-[#FFCA28] lg:text-2xl"/>
+        <SiCss3 className="text-[#264DE4] lg:text-2xl" />
       </div>
     )
   },
@@ -109,10 +109,10 @@ const data = [
     src: "/assets/tenzies.png",
     deployedLink: "https://scrimba-krishna-v-react-game-tenzies.netlify.app/",
     technologies: (
-      <div className="flex items-center justify-center gap-4">
-        <SiReact className="text-[#61DAFB] text-2xl" />
-        <SiJavascript className="text-[#F7DF1E] text-2xl" />
-        <SiCss3 className="text-[#264DE4] text-2xl" />
+      <div className="flex items-center gap-1 lg:gap-2">
+        <SiReact className="text-[#61DAFB] lg:text-2xl" />
+        <SiJavascript className="text-[#F7DF1E] lg:text-2xl" />
+        <SiCss3 className="text-[#264DE4] lg:text-2xl" />
       </div>
     )
   },
