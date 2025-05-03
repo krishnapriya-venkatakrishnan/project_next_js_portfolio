@@ -5,7 +5,7 @@ import Image from "next/image";
 import { SiClerk, SiCss3, SiFirebase, SiGit, SiJavascript, SiMongodb, SiNextdotjs, SiOpenai, SiReact, SiReactrouter, SiShadcnui, SiTailwindcss, SiTypescript, SiZod } from "react-icons/si";
 import GsapLogo from "./GsapLogo";
 import { cn } from "@/lib/utils";
-import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
+// import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
 
 export function BentoGridThirdDemo() {
   return (
