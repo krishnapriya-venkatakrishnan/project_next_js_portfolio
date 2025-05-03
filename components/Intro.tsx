@@ -20,12 +20,12 @@ const Intro = () => {
           </div>  
         </div>
 
-        <div className="tracking-wide text-center text-xl py-4 uppercase 2xl:text-[1.5rem]">
+        <div className="tracking-wide text-center sm:text-xl py-4 uppercase 2xl:text-[1.5rem]">
             A <span className="font-bold underline">web developer</span>, based in Stockholm
         </div>
 
         <div className="flex items-end justify-center px-8 pb-18">
-          <div className="text-center tracking-wide text-xl max-w-[800px] 2xl:text-[1.5rem]">
+          <div className="text-center tracking-wide sm:text-xl max-w-[800px] 2xl:text-[1.5rem]">
           Former banking software engineer turned web developer- crafting responsive, modern web apps using React, Next.js, and MongoDB.
           </div>
         </div>

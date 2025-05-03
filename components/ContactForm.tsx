@@ -82,22 +82,22 @@ export function ContactForm() {
   }
 
   return (
-    <section id="contact" className="h-[100dvh] mx-auto lg:w-[50dvw] dark:bg-black">
+    <section id="contact" className="mx-auto max-w-5xl lg:w-[50dvw] dark:bg-black">
       <div className="mx-auto w-full rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black">
 
-      <h1 className="text-[3rem] font-bold tracking-[0.125rem] lowercase text-center 2xl:text-[4rem]">contact.</h1>
-      <h2 className="text-[1.25rem] uppercase text-center 2xl:text-[1.75rem]">Let&apos;s work together</h2>
+      <h2 className="mt-5 mb-0 h-[10dvh] font-bold tracking-[0.125rem] text-center text-[1.75rem] lg:text-[3rem] 2xl:text-[4rem]">contact.</h2>
+      <h3 className="lowercase max-sm:-mt-6 mb-6 text-center text-[1.5rem] lg:text-[2.5rem] 2xl:text-[3rem]">I&apos;m available for work</h3>
 
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 shadow-input p-4 w-full flex flex-col 2xl:text-[1.5rem] 2xl:gap-4">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="max-lg:space-y-4 space-y-8 shadow-input p-4 w-full flex flex-col 2xl:gap-4">
           <FormField
             control={form.control}
             name="name"
             render={({ field }) => (
               <FormItem className="flex flex-col gap-2">
-                <FormLabel className="2xl:text-[1.5rem]">Your Name</FormLabel>
+                <FormLabel className="max-lg:text-[0.9rem]">Your Name</FormLabel>
                 <FormControl>
-                  <Input className="2xl:text-[1.5rem] 2xl:py-8" placeholder="Enter your name" {...field} />
+                  <Input className="max-lg:text-[0.9rem] 2xl:py-8" placeholder="Enter your name" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -109,9 +109,9 @@ export function ContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem className="flex flex-col gap-2">
-                <FormLabel className="2xl:text-[1.5rem]">Your Email Address</FormLabel>
+                <FormLabel className="max-lg:text-[0.9rem]">Your Email Address</FormLabel>
                 <FormControl>
-                  <Input className="2xl:text-[1.5rem] 2xl:py-8" placeholder="Enter your email address" {...field} />
+                  <Input className="max-lg:text-[0.9rem] 2xl:py-8" placeholder="Enter your email address" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -123,9 +123,9 @@ export function ContactForm() {
             name="message"
             render={({ field }) => (
               <FormItem className="flex flex-col gap-2">
-                <FormLabel className="2xl:text-[1.5rem]">Your Message</FormLabel>
+                <FormLabel className="max-lg:text-[0.9rem]">Your Message</FormLabel>
                 <FormControl>
-                  <Textarea className="2xl:text-[1.5rem] 2xl:py-8" placeholder="Enter your message" {...field} />
+                  <Textarea className="max-lg:text-[0.9rem] 2xl:py-8" placeholder="Enter your message" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

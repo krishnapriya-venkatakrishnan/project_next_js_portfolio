@@ -1,7 +1,7 @@
 "use client";
 
 import { useToast } from "@/hooks/useToast"
-import { IconCopy, IconCornerUpRightDouble } from "@tabler/icons-react"
+import { IconBrandGithub, IconBrandLinkedin, IconMail, IconPhone } from "@tabler/icons-react"
 import Link from "next/link"
 
 const Footer = () => {
@@ -25,38 +25,24 @@ const Footer = () => {
   }
   
   return (
-    <div className="flex max-sm:flex-col items-center justify-center gap-2 max-w-9xl dark:bg-black 2xl:text-[1.5rem]">
-      <div className="flex items-center justify-center p-2 gap-1">
-        <p>krishnapriyavenkatakrishnan@gmail.com</p>
-        <span onClick={() => copyText("krishnapriyavenkatakrishnan@gmail.com")} className="cursor-pointer"><IconCopy /></span>
-      </div>
-
-      <div className="flex items-center justify-center p-2 gap-1">
-        <p>+46 736595250</p>
-        <span onClick={() => copyText("+46 736595250")} className="cursor-pointer"><IconCopy /></span>
-      </div>
-
+    <footer className="min-h-[40px] w-full bg-gradient-to-br from-black to-neutral-600 font-medium text-white dark:text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset] flex items-center justify-evenly py-2 2xl:py-4">
+      <IconMail className="cursor-pointer" onClick={() => copyText("krishnapriyavenkatakrishnan@gmail.com")} />
+      <IconPhone className="cursor-pointer" onClick={() => copyText("+46 736595250")} />
+      <Link
+          href="https://github.com/krishnapriya-venkatakrishnan?tab=repositories"
+          target="_blank"
+      >
+        <IconBrandGithub className="cursor-pointer" />
+      </Link>
       
-      <div className="flex items-center justify-center p-2 gap-1">
-        <p>GitHub</p>
-        <Link
-          href="#"
-        >
-          <span><IconCornerUpRightDouble /></span>
-        </Link>
-      </div>
+      <Link
+        href="https://www.linkedin.com/in/krishnapriya-venkatakrishnan-891b4819a/"
+        target="_blank"
+      >
+        <IconBrandLinkedin className="cursor-pointer" />
+      </Link>
       
-
-      <div className="flex items-center justify-center p-2 gap-1">
-        <p>LinkedIn</p>
-        <Link
-          href="#"
-        >
-          <span><IconCornerUpRightDouble /></span>
-        </Link>
-      </div>
-    
-    </div>
+    </footer>
   )
 }
 

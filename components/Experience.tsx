@@ -1,7 +1,7 @@
 export function Experience() {
 
   return (
-    <div className="lg:h-[100dvh] w-full max-w-7xl mx-auto">
+    <div className=" w-full max-w-7xl mx-auto">
       <h2 className="my-10 h-[10dvh] font-bold tracking-[0.125rem] text-center text-[1.75rem] lg:text-[3rem] 2xl:text-[4rem] px-8">
           my journey at Temenos.
       </h2>
