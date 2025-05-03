@@ -10,7 +10,7 @@ export default function Home() {
     <main className="dark:bg-black">
       <Navbar />
       <Intro />
-      <AppleCardsCarouselDemo />
+      {/* <AppleCardsCarouselDemo /> */}
       <BentoGridThirdDemo />
       <Experience />
       <ContactForm />      
