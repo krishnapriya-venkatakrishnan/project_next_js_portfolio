@@ -1,8 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "./ui/Button";
-import { IconChevronsDown, IconDownload } from "@tabler/icons-react";
+import { IconChevronsDown } from "@tabler/icons-react";
 
 const Intro = () => {
   return (
@@ -38,15 +37,6 @@ const Intro = () => {
               <IconChevronsDown className="h-full w-full" />
             </div>
           </Link>
-          
-          
-        </div>
-        <div className="self-end absolute bottom-5 right-5">
-          <a href="/Krishnapriya_Venkatakrishnan_Resume.pdf" download>
-            <Button className="cursor-pointer border-1 bg-black text-white dark:border-black dark:bg-white dark:text-black md:text-[1.25rem] md:px-8 md:py-6 2xl:text-[1.5rem] 2xl:px-16 2xl:py-8 ">
-              <IconDownload className="2xl:scale-[1.5] 2xl:mr-2" /><span className="hidden lg:block">Download</span> Resume
-            </Button>
-          </a>
         </div>
     </section>
   )

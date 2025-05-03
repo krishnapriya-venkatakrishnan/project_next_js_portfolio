@@ -61,7 +61,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
   return (
       <div className="relative w-full h-full flex flex-col flex-1">
-        <h2 className="relative h-[10dvh] font-bold tracking-[0.125rem] text-center text-[1.75rem] lg:text-[3rem] 2xl:text-[4rem]">
+        <h2 className="relative h-[10dvh] font-bold tracking-[0.125rem] text-center text-[1.75rem] lg:text-[3rem] 2xl:text-[4rem] mb-2">
           my projects.
         </h2>
         <div className="h-[90dvh]">
