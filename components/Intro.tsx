@@ -5,7 +5,7 @@ import { IconChevronsDown } from "@tabler/icons-react";
 
 const Intro = () => {
   return (
-    <section className="h-[100dvh] flex flex-col items-center justify-center">
+    <section className="lg:h-[100dvh] flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center font-medium">
           <div className="overflow-hidden w-full">
             <div className="whitespace-nowrap animate-marquee-left w-full flex items-center justify-center">
@@ -29,7 +29,7 @@ const Intro = () => {
           </div>
         </div>
 
-        <div className="flex items-center">
+        <div className="flex items-center max-lg:hidden">
           <Link href="#projects">
             <div
               className="h-[40px] w-[40px] md:h-[55px] md:w-[55px] lg:h-[70px] lg:w-[70px] animate-bounce cursor-pointer flex items-center justify-center"
