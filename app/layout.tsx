@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Krishnapriya Venkatakrishnan | Front-End Web Developer",
     description: "Interactive and responsive websites built with React, Next.js, and modern tools.",
-    url: "", // domain name
+    url: "https://www.krishnapriya.dev/", // domain name
     siteName: "Krishnapriya Venkatakrishnan's Portfolio",
     images: [
       {

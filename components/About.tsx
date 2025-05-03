@@ -113,7 +113,7 @@ export function BentoGridThirdDemo() {
             </table>
           </div>
           <div className="flex flex-1 flex-col gap-4 justify-start ">
-            <p className="text-[1.125rem] lg:text-[1.25rem] font-bold 2xl:text-[1.5rem] pb-1 ">certificates.</p>
+            <p className="text-[1.125rem] lg:text-[1.25rem] font-bold 2xl:text-[1.5rem] pb-1 ">certificate.</p>
             <Certificates />
           </div>
         </div>
@@ -189,7 +189,8 @@ const Certificates = () => {
         <p className="flex-1 flex justify-center items-center text-[0.9rem] py-2">From Scrimba</p>
       </motion.div>
       
-      <motion.div
+      {/* will be uncommented, once certificate is received */}
+      {/* <motion.div
         className={cn("w-full rounded-2xl bg-white dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-between max-lg:max-w-[500px] max-lg:self-start", display === "scrimba" && "hidden")}
       >
         <Image
@@ -201,9 +202,9 @@ const Certificates = () => {
           className="object-contain rounded-tl-2xl rounded-tr-2xl w-full max-lg:max-w-[500px]"
         />
         <p className="py-2 flex-1 flex justify-center items-center text-[0.9rem]">From JavaScript Mastery</p>
-      </motion.div>
+      </motion.div> */}
 
-      <div className="max-lg:self-start flex justify-end items-center gap-2 mb-4 pt-2 max-lg:max-w-[500px]">
+      {/* <div className="max-lg:self-start flex justify-end items-center gap-2 mb-4 pt-2 max-lg:max-w-[500px]">
         <button
           className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50 cursor-pointer"
           onClick={handleClick}
@@ -218,7 +219,7 @@ const Certificates = () => {
         >
           <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
         </button>
-      </div>
+      </div> */}
     </motion.div>
     </>
   );
