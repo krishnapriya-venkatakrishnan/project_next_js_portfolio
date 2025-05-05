@@ -2,10 +2,25 @@
 
 import Link from "next/link";
 import { IconChevronsDown } from "@tabler/icons-react";
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 const Intro = () => {
+  const [firstLoad, setFirstLoad] = useState(true);
+  useEffect(()=> {
+    if (!firstLoad)
+      return
+
+    const modifyMargin = () => {
+      setFirstLoad(false);
+    }
+
+    window.addEventListener("resize", modifyMargin);
+    return () => window.removeEventListener("resize", modifyMargin);
+  }, [firstLoad]);
+  
   return (
-    <section className="h-[90dvh] flex flex-col items-center justify-center overflow-hidden">
+    <section className={cn("h-[100dvh] flex flex-col items-center justify-center overflow-hidden", firstLoad && "max-lg:-mt-10")}>
         <div className="flex flex-col items-center justify-center font-medium">
           <div className="overflow-hidden w-full">
             <div className="whitespace-nowrap animate-marquee-left w-full flex items-center justify-center">
