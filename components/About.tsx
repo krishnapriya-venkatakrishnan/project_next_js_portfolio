@@ -15,7 +15,7 @@ export function BentoGridThirdDemo() {
         <div className="flex-1 self-start px-4 max-lg:text-[0.9rem] flex items-center gap-10 max-lg:flex-col">
           <ProfilePicture />
           <div>
-          I&apos;m a passionate self-taught web developer with a background in banking software (T24). After nearly six years in the fintech industry, I relocated to Stockholm, Sweden, in December 2022. I transitioned into web development to build visually engaging and interactive user experiences.<br /><br />
+          I&apos;m a passionate self-taught web developer with a background in banking software (T24). After nearly six years in the fintech industry, I relocated to Stockholm, Sweden, in January 2023. I transitioned into web development to build visually engaging and interactive user experiences.<br /><br />
 
           I specialize in building clean, responsive UIs using React, Next.js, and modern front-end tools. I&apos;m particularly excited about exploring animation libraries like GSAP to create engaging and dynamic user experiences.<br /><br />
 
