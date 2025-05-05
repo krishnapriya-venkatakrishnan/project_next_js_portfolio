@@ -131,7 +131,7 @@ const ProfilePicture = () => {
     alt="Profile"
     width={400}
     height={250}
-    className="rounded-3xl border-4 max-lg:w-[300px]"
+    className="rounded-3xl border-4 max-lg:w-[250px]"
     />
   );
 };

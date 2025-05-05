@@ -4,12 +4,12 @@ const Navbar = () => {
   
   const navList = [
     {
-      name: "about",
-      link: "#about",
-    },
-    {
       name: "projects",
       link: "#projects",
+    },
+    {
+      name: "about",
+      link: "#about",
     },
     {
       name: "contact",

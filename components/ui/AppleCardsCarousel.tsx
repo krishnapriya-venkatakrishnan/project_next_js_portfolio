@@ -43,21 +43,44 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
   const checkScrollability = () => {
     if (carouselRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
+      const { scrollLeft } = carouselRef.current;
+      
       setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(scrollLeft < scrollWidth - clientWidth);
+      
+      if (window.innerWidth <= 640)
+        setCanScrollRight(scrollLeft < 1780); // card width 356px
+      else if (window.innerWidth <= 1024)
+        setCanScrollRight(scrollLeft < 3080); // card width 616px
+      else if (window.innerWidth <= 1536)
+        setCanScrollRight(scrollLeft < 2464); // card width 616px
+      else
+        setCanScrollRight(scrollLeft < 4640); // card width 1160px
     }
   };
 
   const scrollLeft = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: -300, behavior: "smooth" });
+      if (window.innerWidth <= 640)
+        carouselRef.current.scrollBy({ left: -370, behavior: "smooth" }); // card width 356px
+      else if (window.innerWidth <= 1024)
+        carouselRef.current.scrollBy({ left: -630, behavior: "smooth" }); // card width 616px
+      else if (window.innerWidth <= 1536)
+        carouselRef.current.scrollBy({ left: -1260, behavior: "smooth" }); // card width 616px
+      else
+        carouselRef.current.scrollBy({ left: -2340, behavior: "smooth" }); // card width 1160px
     }
   };
 
   const scrollRight = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: 300, behavior: "smooth" });
+      if (window.innerWidth <= 640)
+        carouselRef.current.scrollBy({ left: 370, behavior: "smooth" }); // card width 356px
+      else if (window.innerWidth <= 1024)
+        carouselRef.current.scrollBy({ left: 630, behavior: "smooth" }); // card width 616px
+      else if (window.innerWidth <= 1536)
+        carouselRef.current.scrollBy({ left: 1260, behavior: "smooth" }); // card width 616px
+      else
+        carouselRef.current.scrollBy({ left: 2340, behavior: "smooth" }); // card width 1160px
     }
   };
 
@@ -77,7 +100,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
           <div
             className={cn(
               "flex flex-row justify-start gap-4 pl-4 lg:pl-10",
-              "mx-auto", // remove max-w-4xl if you want the carousel to span the full width of its container
+              "mx-auto ", // remove max-w-4xl if you want the carousel to span the full width of its container
             )}
           >
             {items.map((item, index) => (
