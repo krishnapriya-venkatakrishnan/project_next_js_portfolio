@@ -14,7 +14,7 @@ export function AppleCardsCarouselDemo() {
 
   return (
     <div id="projects" className="w-full lg:h-[100dvh] pb-20">
-      <h2 className="my-10 h-[10dvh] font-bold tracking-[0.125rem] text-center text-[1.75rem] lg:text-[3rem] 2xl:text-[4rem]">my projects.</h2>
+      <h2 className="max-lg:mt-10 lg:my-10 h-[10dvh] font-bold tracking-[0.125rem] text-center text-[1.75rem] lg:text-[3rem] 2xl:text-[4rem]">my projects.</h2>
       <Carousel items={cards} />
     </div>
   );
@@ -26,7 +26,7 @@ const DevOverflowContent = () => (
       <div className=" rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
         <InfiniteMovingCards
           items={devFlowScreenshots}
-          direction="right"
+          direction="left"
           speed="slow"
         />
       </div>
@@ -92,7 +92,7 @@ const LiveDocsContent = () => (
       <div className=" rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
         <InfiniteMovingCards
           items={liveDocsScreenshots}
-          direction="right"
+          direction="left"
           speed="slow"
         />
       </div>
@@ -142,7 +142,7 @@ const LandingPage = () => (
       <div className=" rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
         <InfiniteMovingCards
           items={landingPageScreenshots}
-          direction="right"
+          direction="left"
           speed="slow"
         />
       </div>
@@ -196,7 +196,7 @@ const AnimatedWebsite = () => (
       <div className=" rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
         <InfiniteMovingCards
           items={AnimatedWebsiteScreenshots}
-          direction="right"
+          direction="left"
           speed="slow"
         />
       </div>
@@ -257,7 +257,7 @@ const Vanlife = () => (
       <div className=" rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
         <InfiniteMovingCards
           items={VanlifeScreenshots}
-          direction="right"
+          direction="left"
           speed="slow"
         />
       </div>
@@ -334,7 +334,7 @@ const Tenzies = () => (
       <div className=" rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
         <InfiniteMovingCards
           items={TenziesScreenshots}
-          direction="right"
+          direction="left"
           speed="slow"
         />
       </div>

@@ -19,7 +19,7 @@ import { Textarea } from "./ui/TextArea"
 import { useState } from "react";
 import { sendMail } from "@/lib/actions/send.action"
 import { useToast } from "@/hooks/useToast"
-import Footer from "./Footer"
+import ContactLinks from "./ContactLinks"
 
 const BottomGradient = () => {
   return (
@@ -86,8 +86,8 @@ export function ContactForm() {
       <div className="mx-auto w-full rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black">
 
       <h2 className="mt-5 mb-0 h-[10dvh] font-bold tracking-[0.125rem] text-center text-[1.75rem] lg:text-[3rem] 2xl:text-[4rem]">contact.</h2>
-      <h3 className="lowercase max-sm:-mt-6 mb-6 text-center text-[1.5rem] lg:text-[2.5rem] 2xl:text-[3rem]">I&apos;m available for work</h3>
-
+      <ContactLinks />
+    
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="max-lg:space-y-4 space-y-8 shadow-input p-4 w-full flex flex-col 2xl:gap-4">
           <FormField
@@ -142,7 +142,7 @@ export function ContactForm() {
       </Form>
 
       </div>
-      <Footer />
+      
     </section>
   );
 }

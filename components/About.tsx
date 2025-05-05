@@ -5,7 +5,7 @@ import Image from "next/image";
 import { SiClerk, SiCss3, SiFirebase, SiGit, SiJavascript, SiMongodb, SiNextdotjs, SiOpenai, SiReact, SiReactrouter, SiShadcnui, SiTailwindcss, SiTypescript, SiZod } from "react-icons/si";
 import GsapLogo from "./GsapLogo";
 import { cn } from "@/lib/utils";
-// import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
+import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
 
 export function BentoGridThirdDemo() {
   return (
@@ -113,7 +113,7 @@ export function BentoGridThirdDemo() {
             </table>
           </div>
           <div className="flex flex-1 flex-col gap-4 justify-start ">
-            <p className="text-[1.125rem] lg:text-[1.25rem] font-bold 2xl:text-[1.5rem] pb-1 ">certificate.</p>
+            <p className="text-[1.125rem] lg:text-[1.25rem] font-bold 2xl:text-[1.5rem] pb-1 ">certificates.</p>
             <Certificates />
           </div>
         </div>
@@ -124,32 +124,13 @@ export function BentoGridThirdDemo() {
 }
 
 const ProfilePicture = () => {
-  const variants = {
-    initial: {
-      backgroundPosition: "0 50%",
-    },
-    animate: {
-      backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
-    },
-  };
+  
   return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      variants={variants}
-      transition={{
-        duration: 5,
-        repeat: Infinity,
-        repeatType: "reverse",
-      }}
+    <div
       className="flex flex-1 max-lg:w-[175px] max-lg:h-[175px] w-[255px] h-[255px] min-h-[6rem] dark:bg-dot-white/[0.2] rounded-3xl bg-dot-black/[0.2] flex-col float-left mr-4"
-      style={{
-        background:
-          "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
-        backgroundSize: "400% 400%",
-      }}
+      
     >
-      <motion.div className="relative h-full w-full rounded-3xl flex items-center justify-center">
+      <div className="relative h-full w-full rounded-3xl flex items-center justify-center">
         <Image
         src="/assets/profile.jpg"
         alt="Profile"
@@ -157,8 +138,8 @@ const ProfilePicture = () => {
         height={250}
         className="rounded-3xl border-4"
         />
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 
@@ -176,7 +157,7 @@ const Certificates = () => {
       className="flex flex-col items-center gap-4 flex-1 w-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] space-x-2"
     >
       <motion.div
-        className={cn("w-full rounded-2xl bg-white dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-between max-lg:max-w-[400px] max-lg:self-start", display !== "scrimba" && "hidden")}
+        className={cn("lg:h-[24rem] w-full rounded-2xl bg-white dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-between max-lg:max-w-[300px] lg:max-w-[600px] max-lg:self-start", display !== "scrimba" && "hidden")}
       >
         <Image
           src="/assets/scrimba-certificate.png"
@@ -184,27 +165,26 @@ const Certificates = () => {
           height={100}
           width={400}
           
-          className=" rounded-tl-2xl rounded-tr-2xl w-full max-lg:max-w-[400px]"
+          className="aspect-[16/9] rounded-tl-2xl rounded-tr-2xl w-full max-lg:max-w-[300px] lg:max-w-[600px]"
         />
-        <p className="flex-1 flex justify-center items-center text-[0.9rem] py-2">From Scrimba</p>
+        <p className="flex-1 flex justify-center items-center text-[0.9rem] py-2">Scrimba</p>
       </motion.div>
       
-      {/* will be uncommented, once certificate is received */}
-      {/* <motion.div
-        className={cn("w-full rounded-2xl bg-white dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-between max-lg:max-w-[500px] max-lg:self-start", display === "scrimba" && "hidden")}
+      <motion.div
+        className={cn("lg:h-[24rem] w-full rounded-2xl bg-white dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-between max-lg:max-w-[300px] lg:max-w-[600px] max-lg:self-start", display === "scrimba" && "hidden")}
       >
         <Image
-          src="/assets/scrimba-certificate.png"
+          src="/assets/jsmastery-certificate.png"
           alt="avatar"
           height={100}
           width={400}
           
-          className="object-contain rounded-tl-2xl rounded-tr-2xl w-full max-lg:max-w-[500px]"
+          className="aspect-[16/9] rounded-tl-2xl rounded-tr-2xl w-full max-lg:max-w-[300px] lg:max-w-[600px]"
         />
-        <p className="py-2 flex-1 flex justify-center items-center text-[0.9rem]">From JavaScript Mastery</p>
-      </motion.div> */}
+        <p className="flex-1 flex justify-center items-center text-[0.9rem] py-2">Javascript Mastery</p>
+      </motion.div>
 
-      {/* <div className="max-lg:self-start flex justify-end items-center gap-2 mb-4 pt-2 max-lg:max-w-[500px]">
+      <div className="max-lg:self-start flex justify-end items-center gap-2 mb-4 pt-2 max-lg:max-w-[300px] lg:max-w-[600px]">
         <button
           className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50 cursor-pointer"
           onClick={handleClick}
@@ -219,7 +199,7 @@ const Certificates = () => {
         >
           <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
         </button>
-      </div> */}
+      </div>
     </motion.div>
     </>
   );
