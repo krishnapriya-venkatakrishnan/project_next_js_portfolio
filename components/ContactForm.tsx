@@ -85,7 +85,7 @@ export function ContactForm() {
     <section id="contact" className="mx-auto max-w-5xl lg:w-[50dvw] dark:bg-black">
       <div className="mx-auto w-full rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black">
 
-      <h2 className="mt-5 mb-0 h-[10dvh] font-bold tracking-[0.125rem] text-center text-[1.75rem] lg:text-[3rem] 2xl:text-[4rem]">contact.</h2>
+      <h2 className="mt-10 h-[10dvh] font-bold tracking-[0.125rem] text-center text-[1.75rem] lg:text-[3rem] 2xl:text-[4rem]">contact.</h2>
       <ContactLinks />
     
       <Form {...form}>

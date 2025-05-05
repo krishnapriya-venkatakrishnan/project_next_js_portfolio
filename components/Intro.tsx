@@ -25,7 +25,7 @@ const Intro = () => {
 
         <div className="flex items-end justify-center px-8 pb-18">
           <div className="text-center tracking-wide sm:text-xl max-w-[800px] 2xl:text-[1.5rem]">
-          Former banking software engineer turned web developer- crafting responsive, modern web apps using React, Next.js, and MongoDB.
+          Former banking software engineer turned web developer, passionate about crafting responsive and modern web applications using React, Next.js, and MongoDB.
           </div>
         </div>
 

@@ -12,19 +12,19 @@ export function BentoGridThirdDemo() {
     <section id="about" className="w-full flex flex-col max-w-7xl mx-auto">
       <h2 className="my-10 h-[10dvh] font-bold tracking-[0.125rem] text-center text-[1.75rem] lg:text-[3rem] 2xl:text-[4rem]">about me.</h2>
       <div className="flex-1 w-full lg:py-8 flex flex-col items-center justify-center tracking-wide gap-2">
-        <div className="flex-1 self-start px-4 max-lg:text-[0.9rem]">
+        <div className="flex-1 self-start px-4 max-lg:text-[0.9rem] flex items-center gap-10 max-lg:flex-col">
           <ProfilePicture />
-          I&apos;m a passionate self-taught front-end developer with a background in banking software (T24). After nearly six years in the fintech industry, I transitioned into web development to bring ideas to life visually and interactively.<br /><br />
+          <div>
+          I&apos;m a passionate self-taught web developer with a background in banking software (T24). After nearly six years in the fintech industry, I relocated to Stockholm, Sweden, in December 2022. I transitioned into web development to build visually engaging and interactive user experiences.<br /><br />
 
           I specialize in building clean, responsive UIs using React, Next.js, and modern front-end tools. I&apos;m particularly excited about exploring animation libraries like GSAP to create engaging and dynamic user experiences.<br /><br />
 
           To fuel my transition into web development, I completed a Front-End Development course through Scrimba, where I gained proficiency in React, JavaScript, HTML, and CSS. Additionally, I deepened my expertise with JS Mastery, focusing on Next.js and MongoDB to build scalable, high-performance web applications.<br /><br />
 
-          In December 2022, I relocated to Stockholm, Sweden, after a career shift. I also had the opportunity to travel and explore diverse cultures, which helped me shape a global perspective on design and technology.<br /><br />
-
           My long-term goal is to expand my skill set further and grow into a full-stack developer, with a focus on building end-to-end applications.<br /><br />
 
           For more details on my background, education, and work experience, feel free to download my <a href="/Krishnapriya_Venkatakrishnan_Resume.pdf" download className="underline">resume</a>.
+          </div>
         </div>
         <div className="w-full self-start flex max-lg:flex-col justify-between gap-4 px-4 lg:mt-6">
           <div className="flex-1">
@@ -126,20 +126,13 @@ export function BentoGridThirdDemo() {
 const ProfilePicture = () => {
   
   return (
-    <div
-      className="flex flex-1 max-lg:w-[175px] max-lg:h-[175px] w-[255px] h-[255px] min-h-[6rem] dark:bg-dot-white/[0.2] rounded-3xl bg-dot-black/[0.2] flex-col float-left mr-4"
-      
-    >
-      <div className="relative h-full w-full rounded-3xl flex items-center justify-center">
-        <Image
-        src="/assets/profile.jpg"
-        alt="Profile"
-        width={250}
-        height={250}
-        className="rounded-3xl border-4"
-        />
-      </div>
-    </div>
+    <Image
+    src="/assets/profile.jpg"
+    alt="Profile"
+    width={400}
+    height={250}
+    className="rounded-3xl border-4 max-lg:w-[300px]"
+    />
   );
 };
 

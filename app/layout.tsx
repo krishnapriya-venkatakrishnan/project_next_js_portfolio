@@ -12,16 +12,16 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Krishnapriya Venkatakrishnan | Front-End Web Developer",
-  description: "Stockholm- based web developer building interactive and responsive websites using React, Next.js, and modern tools",
+  title: "Krishnapriya Venkatakrishnan | Web Developer",
+  description: "Stockholm-based web developer creating modern, responsive, and interactive websites using React, Next.js, and MongoDB.",
   openGraph: {
-    title: "Krishnapriya Venkatakrishnan | Front-End Web Developer",
-    description: "Interactive and responsive websites built with React, Next.js, and modern tools.",
-    url: "https://www.krishnapriya.dev/", // domain name
+    title: "Krishnapriya Venkatakrishnan | Web Developer",
+    description: "Modern, responsive, and interactive web applications built using React, Next.js, and MongoDB.",
+    url: "https://www.krishnapriya.dev/",
     siteName: "Krishnapriya Venkatakrishnan's Portfolio",
     images: [
       {
-        url: "/assets/og-image.png", //image
+        url: "/assets/og-image.png",
         width: 1200,
         height: 630,
         alt: "Screenshot of Krishnapriya Venkatakrishnan's portfolio website",
@@ -40,6 +40,7 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
 };
+
 
 export default function RootLayout({
   children,

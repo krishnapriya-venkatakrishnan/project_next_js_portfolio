@@ -51,7 +51,7 @@ const ContactLinks = () => {
         repeat: Infinity,
         repeatType: "reverse",
       }}
-      className="min-h-[40px] w-full font-medium text-black dark:text-white flex dark:bg-dot-white/[0.2] rounded-3xl bg-dot-black/[0.2] items-center justify-evenly py-2 2xl:py-4 max-w-[400px] mx-auto mb-8"
+      className="min-h-[40px] w-full font-medium text-black dark:text-white flex dark:bg-dot-white/[0.2] rounded-3xl bg-dot-black/[0.2] items-center justify-evenly py-2 2xl:py-4 max-w-[400px] mx-auto mb-8 md:mt-4"
       style={{
         background:
           "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
