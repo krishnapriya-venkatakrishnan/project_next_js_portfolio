@@ -5,7 +5,7 @@ import { IconChevronsDown } from "@tabler/icons-react";
 
 const Intro = () => {
   return (
-    <section className="h-[100svh] flex flex-col items-center justify-center overflow-hidden">
+    <section className="h-[90dvh] flex flex-col items-center justify-center overflow-hidden">
         <div className="flex flex-col items-center justify-center font-medium">
           <div className="overflow-hidden w-full">
             <div className="whitespace-nowrap animate-marquee-left w-full flex items-center justify-center">

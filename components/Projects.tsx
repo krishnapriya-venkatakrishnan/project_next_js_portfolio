@@ -13,7 +13,7 @@ export function AppleCardsCarouselDemo() {
   ));
 
   return (
-    <section id="projects" className="w-full lg:h-[100dvh] pb-20">
+    <section id="projects" className="w-full lg:h-[100dvh] pb-20 mt-[10dvh]">
       <h2 className="pt-10 h-[10dvh] font-bold tracking-[0.125rem] text-center text-[1.75rem] lg:text-[3rem] 2xl:text-[4rem]">my projects.</h2>
       <Carousel items={cards} />
     </section>
