@@ -202,7 +202,7 @@ export const Card = ({
       </AnimatePresence>
       <motion.div
         layoutId={layout ? `card-${card.title}` : undefined}
-        className="relative z-10 flex h-74 w-89 flex-col items-start justify-end pb-4 overflow-hidden rounded-3xl bg-gray-100 md:h-105 md:w-154 2xl:h-180 2xl:w-290 dark:bg-neutral-900"
+        className="relative z-10 flex h-64 w-89 flex-col items-start justify-end pb-4 overflow-hidden rounded-3xl bg-gray-100 md:h-105 md:w-154 2xl:h-180 2xl:w-290 dark:bg-neutral-900"
       >
         
         <BlurImage
@@ -256,7 +256,7 @@ export const BlurImage = ({
   return (
     <Image
       className={cn(
-        "!h-55 md:!h-80 2xl:!h-150 w-full transition duration-300 object-contain",
+        "!h-45 md:!h-80 2xl:!h-150 w-full transition duration-300 object-contain",
         isLoading ? "blur-sm" : "blur-0",
         className,
       )}
