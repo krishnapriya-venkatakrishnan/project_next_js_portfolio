@@ -20,8 +20,8 @@ const Intro = () => {
   }, [firstLoad]);
   
   return (
-    <section className={cn("h-[100dvh] flex flex-col items-center justify-center overflow-hidden", firstLoad && "max-lg:-mt-10")}>
-        <div className="flex flex-col items-center justify-center font-medium">
+    <section className="h-[100dvh] flex flex-col items-center justify-center overflow-hidden">
+        <div className={cn("flex flex-col items-center justify-center font-medium", firstLoad && "max-lg:-mt-10")}>
           <div className="overflow-hidden w-full">
             <div className="whitespace-nowrap animate-marquee-left w-full flex items-center justify-center">
               <h1 className="text-[2.5rem] md:text-6xl lg:text-8xl xl:text-9xl">krishnapriya </h1>
