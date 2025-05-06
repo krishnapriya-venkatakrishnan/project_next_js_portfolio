@@ -13,10 +13,10 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "Krishnapriya Venkatakrishnan | Web Developer",
-  description: "Stockholm-based web developer creating modern, responsive, and interactive websites using React, Next.js, and MongoDB.",
+  description: "A developer resume site by Krishnapriya Venkatakrishnan, built with Next.js. Showcases responsive, interactive projects crafted with Next.js, React, MongoDB, and TailwindCSS.",
   openGraph: {
     title: "Krishnapriya Venkatakrishnan | Web Developer",
-    description: "Modern, responsive, and interactive web applications built using React, Next.js, and MongoDB.",
+    description: "A developer resume site by Krishnapriya Venkatakrishnan, built with Next.js. Showcases responsive, interactive projects crafted with Next.js, React, MongoDB, and TailwindCSS.",
     url: "https://www.krishnapriya.dev/",
     siteName: "Krishnapriya Venkatakrishnan's Portfolio",
     images: [
