@@ -7,6 +7,7 @@ import React, {
 import {
   IconArrowNarrowLeft,
   IconArrowNarrowRight,
+  IconCircleArrowUpRightFilled,
   IconX,
 } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
@@ -14,7 +15,6 @@ import { AnimatePresence, motion } from "motion/react";
 import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "../../hooks/useOutsideClick";
 import Link from "next/link";
-import { HighlightButton } from "./MovingGrid";
 
 interface CarouselProps {
   items: JSX.Element[];
@@ -207,17 +207,51 @@ export const Card = ({
               className="relative z-[60] mx-auto my-10 h-fit max-w-5xl rounded-3xl bg-white p-4 font-sans md:p-10 dark:bg-neutral-900"
             >
               <button
-                className="sticky top-4 right-0 ml-auto flex h-8 w-8 items-center justify-center rounded-full bg-neutral-700 dark:bg-white cursor-pointer"
+                className=" top-4 right-0 ml-auto flex h-8 w-8 items-center justify-center rounded-full bg-neutral-700 dark:bg-white cursor-pointer"
                 onClick={handleClose}
               >
                 <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
               </button>
-              <motion.p
-                layoutId={layout ? `title-${card.title}` : undefined}
-                className="mt-4 text-neutral-700 dark:text-white text-[1.125rem] lg:text-[1.25rem] font-bold 2xl:text-[1.5rem]"
-              >
-                {card.title}
-              </motion.p>
+              <motion.div className="mt-4 flex items-center justify-between">
+                <motion.p
+                  layoutId={layout ? `title-${card.title}` : undefined}
+                  className=" text-neutral-700 dark:text-white text-[1.125rem] lg:text-[1.25rem] font-bold 2xl:text-[1.5rem]"
+                >
+                  {card.title}
+                </motion.p>
+                <motion.div
+                  initial="initial"
+                  animate="animate"
+                  variants={{
+                    initial: {
+                      backgroundPosition: "0 50%",
+                    },
+                    animate: {
+                      backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
+                    },
+                  }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  }}
+                  className=" w-full  text-black dark:text-white flex dark:bg-dot-white/[0.2] rounded-3xl bg-dot-black/[0.2] items-center justify-evenly py-2 max-w-[150px] lg:max-w-[200px] mb-8 mt-8"
+                  style={{
+                    background:
+                      "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
+                    backgroundSize: "400% 400%",
+                  }}
+                >
+                  <Link
+                  href={card.deployedLink}
+                  className="cursor-pointer lg:text-[1.25rem] font-bold 2xl:text-[1.5rem]"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                      Project Demo
+                  </Link>
+                </motion.div>
+              </motion.div>
               <div className="py-10">{card.content}</div>
             </motion.div>
           </div>
@@ -225,7 +259,8 @@ export const Card = ({
       </AnimatePresence>
       <motion.div
         layoutId={layout ? `card-${card.title}` : undefined}
-        className="relative z-10 flex h-64 w-89 flex-col items-start justify-end pb-4 overflow-hidden rounded-3xl bg-gray-100 md:h-105 md:w-154 2xl:h-180 2xl:w-290 dark:bg-neutral-900"
+        className="relative z-10 flex h-64 w-89 flex-col items-start justify-end pb-4 overflow-hidden rounded-3xl bg-gray-100 md:h-105 md:w-154 2xl:h-180 2xl:w-290 dark:bg-neutral-900 hover:brightness-90 cursor-pointer"
+        onClick={handleOpen}
       >
         
         <BlurImage
@@ -236,28 +271,7 @@ export const Card = ({
         />
         <div className="w-full flex items-center justify-between px-4">
           <p className="max-lg:text-[0.9rem] font-medium">{card.title}</p>
-          <div className="flex items-center gap-2 max-lg:gap-1">
-              <HighlightButton
-                borderRadius="1.75rem"
-                className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 cursor-pointer text-[0.75rem] lg:text-[1rem] 2xl:text-[1.25rem]"
-                onClick={handleOpen}
-              >
-                explore
-              </HighlightButton>
-            <Link
-            href={card.deployedLink}
-            className="cursor-pointer lg:self-center"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-              <HighlightButton
-                borderRadius="1.75rem"
-                className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 cursor-pointer text-[0.75rem] lg:text-[1rem] 2xl:text-[1.25rem]"
-              >
-                demo
-              </HighlightButton>
-            </Link>
-          </div>
+          <IconCircleArrowUpRightFilled className="max-lg:scale-[0.9] text-neutral-900 dark:text-white" />
         </div>
         <div className="w-full flex items-center justify-between px-4 pt-2">
           {card.technologies}
