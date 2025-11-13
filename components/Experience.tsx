@@ -3,8 +3,25 @@ export function Experience() {
   return (
     <div className="pt-10 w-full max-w-7xl mx-auto">
       <h2 className="my-10 h-[10dvh] font-bold tracking-[0.125rem] text-center text-[1.75rem] lg:text-[3rem] 2xl:text-[4rem] px-8">
-          my journey at Temenos.
+          my professional journey.
       </h2>
+      <h4 className="underline my-4 font-bold text-center text-[1.25rem] lg:text-[2rem] 2xl:text-[3rem] px-8">
+          Ezichoice AB, Stockholm, Sweden.
+      </h4>
+      <div className="flex flex-col items-start justify-center gap-4 px-4 mb-10">
+        <div className="flex-1 flex flex-col gap-2">
+          <h2 className="text-[1.125rem] lg:text-[1.25rem] font-bold 2xl:text-[1.5rem] pb-1">Full-Stack Developer Intern</h2>
+          <p className="pb-4 max-lg:text-[0.9rem] italic">August 2025- Present</p>
+          <ul className="flex flex-col gap-1.5 max-lg:text-[0.9rem]">
+            <li>Contributing to the development of a web application (currently under development) using{" "}<strong>React, JavaScript, Next.js, TypeScript,</strong> and <strong>Supabase</strong>.</li>
+            <li>Collaborating with the development team to design, build, and optimize full-stack features that ensure smooth user experiences.</li>
+            <li>Implementing responsive UI components and integrating database functionalities for scalable, modern web applications.</li>
+          </ul>
+        </div>
+      </div>
+      <h4 className="underline my-4 font-bold text-center text-[1.25rem] lg:text-[2rem] 2xl:text-[3rem] px-8">
+          Temenos India Private Limited, Chennai, India.
+      </h4>
       <div className="flex max-sm:flex-col justify-center items-start">
       <div className="w-full flex flex-col items-start justify-center gap-4 px-4">
         <div className="flex-1 flex flex-col gap-2">

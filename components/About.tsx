@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
-import { SiClerk, SiCss3, SiFirebase, SiGit, SiJavascript, SiMongodb, SiNextdotjs, SiOpenai, SiReact, SiReactrouter, SiShadcnui, SiTailwindcss, SiTypescript, SiZod } from "react-icons/si";
+import { SiClerk, SiCss3, SiFirebase, SiGit, SiJavascript, SiMongodb, SiNextdotjs, SiOpenai, SiReact, SiReactrouter, SiShadcnui, SiSupabase, SiTailwindcss, SiTypescript, SiZod } from "react-icons/si";
 import GsapLogo from "./GsapLogo";
 import { cn } from "@/lib/utils";
 import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
@@ -15,13 +15,15 @@ export function BentoGridThirdDemo() {
         <div className="flex-1 self-start px-4 max-lg:text-[0.9rem] flex items-center gap-10 max-lg:flex-col">
           <ProfilePicture />
           <div>
-          I&apos;m a passionate self-taught web developer with a background in banking software (T24). After nearly six years in the fintech industry, I relocated to Stockholm, Sweden, in January 2023. I transitioned into web development to build visually engaging and interactive user experiences.<br /><br />
+          I&apos;m a passionate self-taught web developer with a background in banking software (T24). After nearly six years in the fintech industry, I relocated to Stockholm, Sweden, in early 2023 and began my transition into modern web development - driven by my love for creating visually engaging and interactive digital experiences.<br /><br />
 
-          I specialize in building clean, responsive UIs using React, Next.js, and modern front-end tools. I&apos;m particularly excited about exploring animation libraries like GSAP to create engaging and dynamic user experiences.<br /><br />
+          Currently, I&apos;m working as a Full-Stack Developer Intern at Ezichoice AB, where I&apos;m contributing to the development of a web application (yet to be released in production) using React, JavaScript, Next.js, TypeScript, and Supabase.<br /><br />
 
-          To fuel my transition into web development, I completed a Front-End Development course through Scrimba, where I gained proficiency in React, JavaScript, HTML, and CSS. Additionally, I deepened my expertise with JS Mastery, focusing on Next.js and MongoDB to build scalable, high-performance web applications.<br /><br />
+          I specialize in building clean, responsive, and intuitive UIs using React, Next.js, and other modern front-end tools. I enjoy experimenting with animation libraries like GSAP to craft smooth, dynamic user experiences that bring interfaces to life.<br /><br />
 
-          My long-term goal is to expand my skill set further and grow into a full-stack developer, with a focus on building end-to-end applications.<br /><br />
+          To strengthen my transition, I completed a Front-End Development course at Scrimba, gaining solid expertise in React, JavaScript, HTML, and CSS. I also deepened my understanding of Next.js and MongoDB through hands-on projects guided by JS Mastery, focusing on developing scalable, high-performance web applications.<br /><br />
+
+          My long-term goal is to continue evolving as a full-stack developer, building seamless end-to-end applications that combine functionality, design, and performance.<br /><br />
 
           For more details on my background, education, and work experience, feel free to download my <a href="/Krishnapriya_Venkatakrishnan_Resume.pdf" download className="underline">resume</a>.
           </div>
@@ -49,6 +51,7 @@ export function BentoGridThirdDemo() {
                   <td className="py-2">Backend & Databases</td>
                   <td className="px-2">
                     <div className="flex items-center gap-4">
+                      <SiSupabase className="text-[#3ECF8E] lg:text-2xl" />
                       <SiMongodb className="text-green-400 lg:text-2xl" />
                       <SiFirebase className="text-[#FFCA28] lg:text-2xl"/>
                       <Image src="/assets/next-auth.png" alt="next-auth" height={25} width={25} className="rounded-full max-lg:h-[20px] max-lg:w-[20px]" />
