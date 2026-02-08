@@ -1,150 +1,59 @@
 "use client";
-import React, { useState } from "react";
-import { motion } from "motion/react";
-import Image from "next/image";
-import { SiClerk, SiCss3, SiFirebase, SiGit, SiJavascript, SiMongodb, SiNextdotjs, SiOpenai, SiReact, SiReactrouter, SiShadcnui, SiSupabase, SiTailwindcss, SiTypescript, SiZod } from "react-icons/si";
-import GsapLogo from "./GsapLogo";
 import { cn } from "@/lib/utils";
 import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
+import { motion } from "motion/react";
+import Image from "next/image";
+import { useState } from "react";
 
 export function BentoGridThirdDemo() {
   return (
-    <section id="about" className="w-full flex flex-col max-w-7xl mx-auto">
-      <h2 className="my-10 h-[10dvh] font-bold tracking-[0.125rem] text-center text-[1.75rem] lg:text-[3rem] 2xl:text-[4rem]">about me.</h2>
-      <div className="flex-1 w-full lg:py-8 flex flex-col items-center justify-center tracking-wide gap-2">
-        <div className="flex-1 self-start px-4 max-lg:text-[0.9rem] flex items-center gap-10 max-lg:flex-col">
-          <ProfilePicture />
-          <div>
-          I&apos;m a passionate self-taught web developer with a background in banking software (T24). After nearly six years in the fintech industry, I relocated to Stockholm, Sweden, in early 2023 and began my transition into modern web development - driven by my love for creating visually engaging and interactive digital experiences.<br /><br />
+    <section id="about" className="pb-10 w-full flex flex-col mx-auto">
+      <h2 className="font-semibold text-[#555555] dark:text-white pb-4">
+        ABOUT
+      </h2>
+      <div className="flex-1 w-full flex flex-col items-center justify-center gap-2">
+        <div className="flex-1 self-start  flex items-center gap-10 max-lg:flex-col">
+          <div className="space-y-4 text-gray-800 dark:text-gray-200">
+            <p>I thrive at the intersection of technology and design, creating intuitive, responsive interfaces that captivate users and deliver tangible value.</p>
 
-          Currently, I&apos;m working as a Full-Stack Developer Intern at Ezichoice AB, where I&apos;m contributing to the development of a web application (yet to be released in production) using React, JavaScript, Next.js, TypeScript, and Supabase.<br /><br />
+            <p>After nearly six years in banking software, I pivoted to web development, mastering React, Next.js, TypeScript, Firebase, Supabase, and MongoDB. This transition empowered me to merge technical depth with a user-centric approach, building solutions that are both robust and elegant.</p>
 
-          I specialize in building clean, responsive, and intuitive UIs using React, Next.js, and other modern front-end tools. I enjoy experimenting with animation libraries like GSAP to craft smooth, dynamic user experiences that bring interfaces to life.<br /><br />
-
-          To strengthen my transition, I completed a Front-End Development course at Scrimba, gaining solid expertise in React, JavaScript, HTML, and CSS. I also deepened my understanding of Next.js and MongoDB through hands-on projects guided by JS Mastery, focusing on developing scalable, high-performance web applications.<br /><br />
-
-          My long-term goal is to continue evolving as a full-stack developer, building seamless end-to-end applications that combine functionality, design, and performance.<br /><br />
-
-          For more details on my background, education, and work experience, feel free to download my <a href="/Krishnapriya_Venkatakrishnan_Resume.pdf" download className="underline">resume</a>.
+            <p>Through hands-on projects and specialized courses, I refine applications from concept to deployment, ensuring performance, usability, and polished design — transforming ideas into digital experiences that users love.</p>
+              
           </div>
         </div>
-        <div className="w-full self-start flex max-lg:flex-col justify-between gap-4 px-4 lg:mt-6">
-          <div className="flex-1">
-            <p className="text-[1.125rem] lg:text-[1.25rem] font-bold 2xl:text-[1.5rem] pb-1 ">technologies.</p>
-            <table className="flex">
-              <thead></thead>
-              <tbody className="mt-4">
-                <tr className="border-b-1 max-lg:text-[0.9rem]">
-                  <td className="py-2">Frontend</td>
-                  <td className="px-2">
-                    <div className="flex items-center gap-4">
-                      <SiReact className="text-[#61DAFB] lg:text-2xl" />
-                      <SiNextdotjs className="text-[#000] dark:text-[#fff] lg:text-2xl" />
-                      <SiTypescript className="text-[#3178C6] lg:text-2xl" />
-                      <SiJavascript className="text-[#F7DF1E] lg:text-2xl" />
-                      <SiTailwindcss className="text-[#06B6D4] lg:text-2xl" />
-                      <SiCss3 className="text-[#264DE4] lg:text-2xl" />
-                    </div>
-                  </td>
-                </tr>
-                <tr className="border-b-1 max-lg:text-[0.9rem]">
-                  <td className="py-2">Backend & Databases</td>
-                  <td className="px-2">
-                    <div className="flex items-center gap-4">
-                      <SiSupabase className="text-[#3ECF8E] lg:text-2xl" />
-                      <SiMongodb className="text-green-400 lg:text-2xl" />
-                      <SiFirebase className="text-[#FFCA28] lg:text-2xl"/>
-                      <Image src="/assets/next-auth.png" alt="next-auth" height={25} width={25} className="rounded-full max-lg:h-[20px] max-lg:w-[20px]" />
-                      <Image src="/assets/logo-live-docs.png" alt="liveblocks" height={25} width={25} className="rounded-full max-lg:h-[20px] max-lg:w-[20px]" />
-                    </div>
-                  </td>
-                </tr>
-                <tr className="border-b-1 max-lg:text-[0.9rem]">
-                  <td className="py-2">UI & Design Systems</td>
-                  <td className="px-2">
-                    <div className="flex items-center gap-4">
-                      <SiShadcnui className="text-[#000] dark:text-[#fff] lg:text-xl" />
-                      <span className="font-sans font-black  dark:text-white text-[1.125rem]">Aceternity UI</span>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="border-b-1 max-lg:text-[0.9rem]">
-                  <td className="py-2">Authentication</td>
-                  <td className="px-2">
-                    <div className="flex items-center gap-4">
-                      <SiClerk className="text-[#000] dark:text-[#fff] lg:text-2xl" />
-                      <Image src="/assets/next-auth.png" alt="next-auth" height={25} width={25} className="rounded-full max-lg:h-[20px] max-lg:w-[20px]" />
-                    </div>
-                  </td>
-                </tr>
-                <tr className="border-b-1 max-lg:text-[0.9rem]">
-                  <td className="py-2">Validation</td>
-                  <td className="px-2">
-                    <div className="flex items-center gap-4">
-                      <SiZod className="text-[#06B6D4] lg:text-2xl" />
-                    </div>
-                  </td>
-                </tr>
-                <tr className="border-b-1 max-lg:text-[0.9rem]">
-                  <td className="py-2">Routing</td>
-                  <td className="px-2">
-                    <div className="flex items-center gap-4">
-                      <SiReactrouter className="text-[#CA4245] lg:text-2xl" />
-                      <SiNextdotjs className="text-[#000] dark:text-[#fff] lg:text-2xl" />
-                    </div>
-                  </td>
-                </tr>
-                <tr className="border-b-1 max-lg:text-[0.9rem]">
-                  <td className="py-2">Animations</td>
-                  <td className="px-2">
-                    <div className="flex items-center gap-4">
-                      <GsapLogo />
-                    </div>
-                  </td>
-                </tr>
-                <tr className="border-b-1 max-lg:text-[0.9rem]">
-                  <td className="py-2">APIs & Tools</td>
-                  <td className="px-2">
-                    <div className="flex items-center gap-4">
-                      <SiOpenai className="lg:text-2xl"/>
-                      <SiGit className="text-[#F05032] lg:text-2xl" />
-                      <Image src="/assets/vs-code-logo.svg" alt="vs-code" height={25} width={25} className="rounded-full max-lg:h-[20px] max-lg:w-[20px]" />
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        {/* <div className="w-full self-start flex max-lg:flex-col justify-between gap-4 px-4 lg:mt-6">
           <div className="flex flex-1 flex-col gap-4 justify-start ">
             <p className="text-[1.125rem] lg:text-[1.25rem] font-bold 2xl:text-[1.5rem] pb-1 ">certificates.</p>
             <Certificates />
           </div>
-        </div>
+        </div> */}
         
       </div>
     </section>
   );
 }
 
-const ProfilePicture = () => {
-  
-  return (
-    <Image
-    src="/assets/profile.jpg"
-    alt="Profile"
-    width={400}
-    height={250}
-    className="rounded-3xl border-4 max-lg:w-[250px]"
-    />
-  );
-};
-
 const Certificates = () => {
 
-  const [display, setDisplay] = useState("scrimba");
+  const [display, setDisplay] = useState({
+    index: 0,
+    name: "intern"
+  });
 
-  const handleClick = () => {
-    setDisplay(prev => prev === "scrimba" ? "jsMastery": "scrimba");
+  const handleClick = (side: string) => {
+    if (side === "right")
+      setDisplay(prev => prev.name === "intern" 
+        ? {index: 1, name: "jsMastery"} 
+          : prev.name === "jsMastery"
+            ? {index: 2, name: "scrimba"} 
+            : {index: 0, name: "intern"});
+    else
+      setDisplay(prev => prev.name === "intern" 
+        ? {index: 2, name: "scrimba"} 
+          : prev.name === "scrimba"
+            ? {index: 1, name: "jsMastery"} 
+            : {index: 0, name: "intern"});
   }
 
   return (
@@ -153,21 +62,19 @@ const Certificates = () => {
       className="flex flex-col items-center gap-4 flex-1 w-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] space-x-2"
     >
       <motion.div
-        className={cn("lg:h-[24rem] w-full rounded-2xl bg-white dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-between max-lg:max-w-[300px] lg:max-w-[600px] max-lg:self-start", display !== "scrimba" && "hidden")}
+        className={cn("lg:h-[24rem] w-full rounded-2xl bg-white dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-between max-lg:max-w-[300px] lg:max-w-[600px] max-lg:self-start", display.name !== "intern" && "hidden")}
       >
         <Image
-          src="/assets/scrimba-certificate.png"
+          src="/assets/intern-certificate-2.png"
           alt="avatar"
           height={100}
           width={400}
-          
-          className="aspect-[16/9] rounded-tl-2xl rounded-tr-2xl w-full max-lg:max-w-[300px] lg:max-w-[600px]"
+          className="rounded-tl-2xl rounded-tr-2xl w-[80%] h-full max-lg:max-w-[300px] lg:max-w-[600px] object-cover zoom-in"
         />
-        <p className="flex-1 flex justify-center items-center text-[0.9rem] py-2">Scrimba</p>
+        <p className="flex-1 flex justify-center items-center text-[0.9rem] py-2">Ezichoice Internship</p>
       </motion.div>
-      
       <motion.div
-        className={cn("lg:h-[24rem] w-full rounded-2xl bg-white dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-between max-lg:max-w-[300px] lg:max-w-[600px] max-lg:self-start", display === "scrimba" && "hidden")}
+        className={cn("lg:h-[24rem] w-full rounded-2xl bg-white dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-between max-lg:max-w-[300px] lg:max-w-[600px] max-lg:self-start", display.name !== "jsMastery" && "hidden")}
       >
         <Image
           src="/assets/jsmastery-certificate.png"
@@ -179,19 +86,29 @@ const Certificates = () => {
         />
         <p className="flex-1 flex justify-center items-center text-[0.9rem] py-2">Javascript Mastery</p>
       </motion.div>
-
+      <motion.div
+        className={cn("lg:h-[24rem] w-full rounded-2xl bg-white dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-between max-lg:max-w-[300px] lg:max-w-[600px] max-lg:self-start", display.name !== "scrimba" && "hidden")}
+      >
+        <Image
+          src="/assets/scrimba-certificate.png"
+          alt="avatar"
+          height={100}
+          width={400}
+          
+          className="aspect-[16/9] rounded-tl-2xl rounded-tr-2xl w-full max-lg:max-w-[300px] lg:max-w-[600px]"
+        />
+        <p className="flex-1 flex justify-center items-center text-[0.9rem] py-2">Scrimba</p>
+      </motion.div>
       <div className="max-lg:self-start flex justify-end items-center gap-2 mb-4 pt-2 max-lg:max-w-[300px] lg:max-w-[600px]">
         <button
           className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50 cursor-pointer"
-          onClick={handleClick}
-          disabled={display === "scrimba"}
+          onClick={() => handleClick("left")}
         >
           <IconArrowNarrowLeft className="h-6 w-6  text-gray-500" />
         </button>
         <button
           className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50 cursor-pointer"
-          onClick={handleClick}
-          disabled={display !== "scrimba"}
+          onClick={() => handleClick("right")}
         >
           <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
         </button>

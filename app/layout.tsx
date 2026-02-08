@@ -1,21 +1,22 @@
-import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
-import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Toaster } from "@/components/ui/Toaster";
+import { ProjectProvider } from "@/context/ProjectContext";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import type { Metadata } from "next";
+import { Figtree } from "next/font/google";
+import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
+const figTree = Figtree({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-  variable: '--font-space-grotesk',
+  variable: '--font-figtree',
 });
 
 export const metadata: Metadata = {
-  title: "Krishnapriya Venkatakrishnan | Web Developer",
+  title: "Krishnapriya Venkatakrishnan | Full-stack Developer",
   description: "A developer resume site by Krishnapriya Venkatakrishnan, built with Next.js. Showcases responsive, interactive projects crafted with Next.js, React, MongoDB, and TailwindCSS.",
   openGraph: {
-    title: "Krishnapriya Venkatakrishnan | Web Developer",
+    title: "Krishnapriya Venkatakrishnan | Full-stack Developer",
     description: "A developer resume site by Krishnapriya Venkatakrishnan, built with Next.js. Showcases responsive, interactive projects crafted with Next.js, React, MongoDB, and TailwindCSS.",
     url: "https://www.krishnapriya.dev/",
     siteName: "Krishnapriya Venkatakrishnan's Portfolio",
@@ -50,15 +51,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${spaceGrotesk.className} antialiased`}
+        className={`${figTree.className} antialiased`}
       >
         <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="light"
             enableSystem
             disableTransitionOnChange
           >
-          {children}
+            <ProjectProvider>
+              {children}
+            </ProjectProvider>
           <Toaster />
         </ThemeProvider>
         <GoogleAnalytics gaId={process.env.GOOGLE_MEASUREMENT_ID!} />

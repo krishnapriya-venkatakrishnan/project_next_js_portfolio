@@ -1,69 +1,46 @@
+"use client";
+
+
 export function Experience() {
+const experiences = [
+  {
+    company: "Ezichoice AB, Stockholm, Sweden",
+    date: "Aug 2025 - Jan 2026",
+    paragraph: `
+As a Full-Stack Developer Intern at Ezichoice AB, I contributed to building full-stack features using React, Next.js, TypeScript, JavaScript, and Supabase. I implemented responsive and intuitive UI components, collaborated closely with the development team to design scalable solutions, and ensured high-performance and smooth user experiences across the application.
+    `,
+  },
+  {
+  company: "Temenos India Private Limited, Chennai, India",
+  date: "Dec 2016 - Dec 2022",
+  paragraph: `
+I progressed from T24 Software Developer to T24 Specialist and finally to Associate Lead Product Engineer. During this time, I developed and tested banking software modules, prepared technical design documents, delivered client demos, mentored junior developers, led technical initiatives, coordinated with stakeholders, conducted risk assessments, and ensured high-quality outcomes. This experience strengthened my problem-solving, collaboration, and leadership skills while building scalable, reliable software solutions.
+  `,
+}
+];
+
 
   return (
-    <div className="pt-10 w-full max-w-7xl mx-auto">
-      <h2 className="my-10 h-[10dvh] font-bold tracking-[0.125rem] text-center text-[1.75rem] lg:text-[3rem] 2xl:text-[4rem] px-8">
-          my professional journey.
+    <section className="pb-10 max-w-7xl mx-auto">
+      <h2 className="font-semibold text-[#555555] pb-4 dark:text-white">
+        EXPERIENCE
       </h2>
-      <h4 className="underline my-4 font-bold text-center text-[1.25rem] lg:text-[2rem] 2xl:text-[3rem] px-8">
-          Ezichoice AB, Stockholm, Sweden.
-      </h4>
-      <div className="flex flex-col items-start justify-center gap-4 px-4 mb-10">
-        <div className="flex-1 flex flex-col gap-2">
-          <h2 className="text-[1.125rem] lg:text-[1.25rem] font-bold 2xl:text-[1.5rem] pb-1">Full-Stack Developer Intern</h2>
-          <p className="pb-4 max-lg:text-[0.9rem] italic">August 2025- Present</p>
-          <ul className="flex flex-col gap-1.5 max-lg:text-[0.9rem]">
-            <li>Contributing to the development of a web application (currently under development) using{" "}<strong>React, JavaScript, Next.js, TypeScript,</strong> and <strong>Supabase</strong>.</li>
-            <li>Collaborating with the development team to design, build, and optimize full-stack features that ensure smooth user experiences.</li>
-            <li>Implementing responsive UI components and integrating database functionalities for scalable, modern web applications.</li>
-          </ul>
-        </div>
+
+      <div className="relative flex flex-col gap-6">
+        {experiences.map((experience, index) => (
+          <div key={index} className="">
+            <h3 className="font-medium text-[#222222] dark:text-white">
+              {experience.company}
+            </h3>
+            <p className="pb-4 max-lg:text-[0.9rem] italic">
+              {experience.date}
+            </p>
+            <p className="max-lg:text-[0.9rem]">
+              {experience.paragraph}
+            </p>
+          </div>
+        ))}
       </div>
-      <h4 className="underline my-4 font-bold text-center text-[1.25rem] lg:text-[2rem] 2xl:text-[3rem] px-8">
-          Temenos India Private Limited, Chennai, India.
-      </h4>
-      <div className="flex max-sm:flex-col justify-center items-start">
-      <div className="w-full flex flex-col items-start justify-center gap-4 px-4">
-        <div className="flex-1 flex flex-col gap-2">
-          <h2 className="text-[1.125rem] lg:text-[1.25rem] font-bold 2xl:text-[1.5rem] pb-1">T24 Software Developer</h2>
-          <p className="pb-4 max-lg:text-[0.9rem] italic">December 2016- Decemeber 2019</p>
-          <ul className="flex flex-col gap-1.5 max-lg:text-[0.9rem]">
-            <li>Developed and tested software solutions based on requirements and technical documents provided.</li>
-            <li>Participated in continuous learning to improve coding techniques and ensure high-quality software delivery.</li>
-            <li>Supported senior developers during critical project phases, contributing to successful project completions.</li>
-          </ul>
-        </div>
-        <div className="flex-1 flex flex-col gap-2">
-          <p className="mt-1 pb-4 max-lg:text-[0.9rem] italic">January 2020- July 2021</p>
-          <ul className="flex flex-col gap-1.5 max-lg:text-[0.9rem]">
-            <li>Analyzed requirements, prepared technical design documents, and contributed to solution development.</li>
-            <li>Led product testing phases, ensuring software met all client requirements before final delivery.</li>
-            <li>Collaborated with cross-functional teams to ensure projects were completed on time and to specifications.</li>
-          </ul>
-        </div>
-      </div>
-      <div className="w-full flex flex-col items-start justify-center gap-4 px-4">
-        <div className="flex-1 flex flex-col gap-2">
-          <h2 className="text-[1.125rem] lg:text-[1.25rem] font-bold 2xl:text-[1.5rem] pb-1 max-sm:mt-4">T24 Specialist</h2>
-          <p className="pb-4 max-lg:text-[0.9rem] italic">August 2021- June 2022</p>
-          <ul className="flex flex-col gap-1.5 max-lg:text-[0.9rem]">
-            <li>Provided customer support and participated in requirement-gathering meetings, ensuring client needs were clearly understood and documented.</li>
-            <li>Delivered client demos, showcasing the software&apos;s capabilities and gathering feedback for further refinement.</li>
-            <li>Developed solutions, prepared technical design documents, and supported testing and post-rollout activities.</li>
-            <li>Mentored peer developers, enhancing the team&apos;s overall skill set and ensuring high-quality code delivery.</li>
-            <li>Actively participated in analysis and delivery, contributing to a smooth development process and successful project outcomes.</li>
-          </ul>
-        </div>
-        <div className="flex-1 flex flex-col gap-2">
-          <h2 className="text-[1.125rem] lg:text-[1.25rem] font-bold 2xl:text-[1.5rem] pb-1 ">T24 Associate Lead Product Engineer</h2>
-          <p className="pb-4 max-lg:text-[0.9rem] italic">July 2022- December 2022</p>
-          <ul className="flex flex-col gap-1.5 max-lg:text-[0.9rem]">
-            <li>In addition to the responsibilities held as a T24 Specialist, I led technical initiatives, coordinating with stakeholders to ensure timely delivery and alignment with client expectations.</li>
-            <li>Conducted risk assessments and developed mitigation strategies to address potential challenges during project execution.</li>
-          </ul>
-        </div>
-      </div>
-      </div>
-    </div>
+    </section>
   );
 }

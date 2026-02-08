@@ -1,20 +1,20 @@
 "use client";
 
-import React from "react";
-import { Carousel, Card } from "@/components/ui/AppleCardsCarousel";
+import { Card, Carousel } from "@/components/ui/AppleCardsCarousel";
 import Image from "next/image";
 import { SiClerk, SiCss3, SiFirebase, SiJavascript, SiMongodb, SiNextdotjs, SiOpenai, SiReact, SiReactrouter, SiShadcnui, SiTailwindcss, SiTypescript, SiZod } from "react-icons/si";
 import GsapLogo from "./GsapLogo";
 import { InfiniteMovingCards } from "./ui/InfiniteMovingCards";
 
 export function AppleCardsCarouselDemo() {
-  const cards = data.map((card, index) => (
-    <Card key={card.src} card={card} index={index} />
+  const cards = data.map((card) => (
+    <Card key={card.src} card={card} />
   ));
 
   return (
-    <section id="projects" className="w-full lg:h-[100dvh] pb-20">
-      <h2 className="pt-10 h-[10dvh] font-bold tracking-[0.125rem] text-center text-[1.75rem] lg:text-[3rem] 2xl:text-[4rem]">my projects.</h2>
+    <section id="projects" className="w-full pb-10">
+      <h2 className="font-semibold text-[#555555] pb-4">WORK</h2>
+      <p className="">Below are some select projects I&apos;ve worked on.</p>
       <Carousel items={cards} />
     </section>
   );
@@ -370,7 +370,8 @@ const TenziesScreenshots = [
 const data = [
   {
     title: "Dev Overflow",
-    src: "/assets/devflow-dark.png",
+    // src: "/assets/devflow-dark.png",
+    src: "/assets/sq-devflow.png",
     content: <DevOverflowContent />,
     deployedLink: "https://nextjs-devflow-nu.vercel.app/",
     technologies: (
@@ -388,8 +389,24 @@ const data = [
     )
   },
   {
+    title: "3D Animated Website",
+    // src: "/assets/3d-animated-website.png",
+    src: "/assets/sq-animated.png",
+    content: <AnimatedWebsite />,
+    deployedLink: "https://project-3d-animated-website.vercel.app/",
+    technologies: (
+      <div className="flex items-center gap-1 lg:gap-2">
+        <SiReact className="text-[#61DAFB] lg:text-2xl" />
+        <SiJavascript className="text-[#F7DF1E] lg:text-2xl" />
+        <GsapLogo />
+        <SiTailwindcss className="text-[#06B6D4] lg:text-2xl" />
+      </div>
+    )
+  },
+  {
     title: "LiveDocs Editor",
-    src: "/assets/live-docs.png",
+    // src: "/assets/live-docs.png",
+    src: "/assets/sq-livedocs.png",
     content: <LiveDocsContent />,
     deployedLink: "https://project-live-docs.vercel.app/",
     technologies: (
@@ -406,7 +423,8 @@ const data = [
   },
   {
     title: "Landing page",
-    src: "/assets/landing-page.png",
+    // src: "/assets/landing-page.png",
+    src: "/assets/sq-saas.png",
     content: <LandingPage />,
     deployedLink: "https://project-landing-page-one.vercel.app/",
     technologies: (
@@ -418,46 +436,33 @@ const data = [
     )
   },
 
-  {
-    title: "3D Animated Website",
-    src: "/assets/3d-animated-website.png",
-    content: <AnimatedWebsite />,
-    deployedLink: "https://project-3d-animated-website.vercel.app/",
-    technologies: (
-      <div className="flex items-center gap-1 lg:gap-2">
-        <SiReact className="text-[#61DAFB] lg:text-2xl" />
-        <SiJavascript className="text-[#F7DF1E] lg:text-2xl" />
-        <GsapLogo />
-        <SiTailwindcss className="text-[#06B6D4] lg:text-2xl" />
-      </div>
-    )
-  },
-  {
-    title: "Vanlife",
-    src: "/assets/vanlife.png",
-    content: <Vanlife />,
-    deployedLink: "https://66bc95639028ae7382537252--famous-fenglisu-54cca7.netlify.app/",
-    technologies: (
-      <div className="flex items-center gap-1 lg:gap-2">
-        <SiReact className="text-[#61DAFB] lg:text-2xl" />
-        <SiJavascript className="text-[#F7DF1E] lg:text-2xl" />
-        <SiReactrouter className="text-[#CA4245] lg:text-2xl" />
-        <SiFirebase className="text-[#FFCA28] lg:text-2xl"/>
-        <SiCss3 className="text-[#264DE4] lg:text-2xl" />
-      </div>
-    )
-  },
-  {
-    title: "Tenzies",
-    src: "/assets/tenzies.png",
-    content: <Tenzies />,
-    deployedLink: "https://scrimba-krishna-v-react-game-tenzies.netlify.app/",
-    technologies: (
-      <div className="flex items-center gap-1 lg:gap-2">
-        <SiReact className="text-[#61DAFB] lg:text-2xl" />
-        <SiJavascript className="text-[#F7DF1E] lg:text-2xl" />
-        <SiCss3 className="text-[#264DE4] lg:text-2xl" />
-      </div>
-    )
-  },
+
+  // {
+  //   title: "Vanlife",
+  //   src: "/assets/vanlife.png",
+  //   content: <Vanlife />,
+  //   deployedLink: "https://66bc95639028ae7382537252--famous-fenglisu-54cca7.netlify.app/",
+  //   technologies: (
+  //     <div className="flex items-center gap-1 lg:gap-2">
+  //       <SiReact className="text-[#61DAFB] lg:text-2xl" />
+  //       <SiJavascript className="text-[#F7DF1E] lg:text-2xl" />
+  //       <SiReactrouter className="text-[#CA4245] lg:text-2xl" />
+  //       <SiFirebase className="text-[#FFCA28] lg:text-2xl"/>
+  //       <SiCss3 className="text-[#264DE4] lg:text-2xl" />
+  //     </div>
+  //   )
+  // },
+  // {
+  //   title: "Tenzies",
+  //   src: "/assets/tenzies.png",
+  //   content: <Tenzies />,
+  //   deployedLink: "https://scrimba-krishna-v-react-game-tenzies.netlify.app/",
+  //   technologies: (
+  //     <div className="flex items-center gap-1 lg:gap-2">
+  //       <SiReact className="text-[#61DAFB] lg:text-2xl" />
+  //       <SiJavascript className="text-[#F7DF1E] lg:text-2xl" />
+  //       <SiCss3 className="text-[#264DE4] lg:text-2xl" />
+  //     </div>
+  //   )
+  // },
 ];

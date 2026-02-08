@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 @import "tailwindcss";
+
 
 @custom-variant dark (&:is(.dark *));
 @plugin "tailwindcss-animate";
@@ -93,3 +95,9 @@
   /* dark mode */
 }
 
+.caveat-font {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
