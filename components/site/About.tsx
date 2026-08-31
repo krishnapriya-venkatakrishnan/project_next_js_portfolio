@@ -24,7 +24,7 @@ export default function About() {
 
         <a
           href={`mailto:${site.contact.email}`}
-          className="mt-4 inline-block text-2xl font-light text-ink underline decoration-line underline-offset-8 transition-colors hover:decoration-accent sm:text-3xl"
+          className="mt-4 inline-block break-all text-base font-light text-ink underline decoration-line underline-offset-8 transition-colors hover:decoration-accent sm:text-2xl md:text-3xl"
         >
           {site.contact.email}
         </a>
