@@ -1,13 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  }
+  // Pin the workspace root: a stray lockfile in a parent directory otherwise
+  // makes Turbopack guess wrong.
+  turbopack: { root: __dirname },
 };
 
 export default nextConfig;

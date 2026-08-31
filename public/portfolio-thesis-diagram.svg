@@ -1,0 +1,39 @@
+<svg viewBox="0 0 960 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="How the systems are built: a language model proposes, a deterministic core decides, approves, and verifies using fixed testable rules, and only approved output reaches an action or human review. Anything rejected is contained and nothing is recorded." font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#52525b"/>
+    </marker>
+    <marker id="arrowMuted" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#a1a1aa"/>
+    </marker>
+  </defs>
+
+  <!-- Box 1: Language model (soft / subordinate) -->
+  <rect x="40" y="90" width="220" height="100" rx="12" fill="#ffffff" stroke="#d4d4d8" stroke-width="1.5"/>
+  <text x="150" y="133" text-anchor="middle" font-size="18" font-weight="600" fill="#18181b">Language model</text>
+  <text x="150" y="160" text-anchor="middle" font-size="13" fill="#71717a">handles conversation, proposes</text>
+
+  <!-- Arrow 1 -->
+  <text x="314" y="130" text-anchor="middle" font-size="12" fill="#71717a">suggests</text>
+  <line x1="262" y1="140" x2="366" y2="140" stroke="#52525b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Box 2: Deterministic core (emphasized) -->
+  <rect x="370" y="72" width="240" height="136" rx="12" fill="#eef0fb" stroke="#6366f1" stroke-width="2"/>
+  <text x="490" y="118" text-anchor="middle" font-size="18" font-weight="600" fill="#18181b">Deterministic core</text>
+  <text x="490" y="144" text-anchor="middle" font-size="13" fill="#3f3f46">decides · approves · verifies</text>
+  <text x="490" y="168" text-anchor="middle" font-size="12" fill="#71717a">fixed, testable rules</text>
+
+  <!-- Arrow 2 -->
+  <text x="665" y="130" text-anchor="middle" font-size="12" fill="#71717a">approved only</text>
+  <line x1="614" y1="140" x2="716" y2="140" stroke="#52525b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Box 3: Action / review -->
+  <rect x="720" y="90" width="200" height="100" rx="12" fill="#ffffff" stroke="#d4d4d8" stroke-width="1.5"/>
+  <text x="820" y="133" text-anchor="middle" font-size="18" font-weight="600" fill="#18181b">Approved action</text>
+  <text x="820" y="160" text-anchor="middle" font-size="13" fill="#71717a">or human review</text>
+
+  <!-- Rejected / contained path -->
+  <line x1="490" y1="208" x2="490" y2="240" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrowMuted)"/>
+  <text x="490" y="262" text-anchor="middle" font-size="13" font-weight="500" fill="#52525b">Rejected, contained</text>
+  <text x="490" y="281" text-anchor="middle" font-size="12" fill="#a1a1aa">nothing recorded, no false alarm</text>
+</svg>
